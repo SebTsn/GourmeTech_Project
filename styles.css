@@ -9,6 +9,7 @@
     --secondary-color:#F5F5F5; 
     --background-color: #FFFFFF; 
 }
+
 header{
     display: flex;
     flex-direction: row;
@@ -30,6 +31,21 @@ header{
     gap: 1rem;
 }
 
+.logoG{
+    font-size: 3rem;
+    color: var(--background-color);
+    font-weight: bold;
+    background-color: var(--primary-color) ;
+    border-style: solid;
+    border-color: var(--primary-color);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .appTitle{
     font-size: 2rem;
     color: var(--primary-color);
@@ -48,6 +64,35 @@ nav .navList li a{
     cursor: pointer;
 }
 nav .navList li a:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+.dark{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+body.dark-mode .navList{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+body.dark-mode nav .navList li a{
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+body.dark-mode nav .navList li a:hover{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     padding: 15px;
