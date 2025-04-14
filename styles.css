@@ -1,0 +1,55 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #E67F22;
+    --secondary-color:#F5F5F5; 
+    --background-color: #FFFFFF; 
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    margin-left: 20px;   
+    margin-right: 20px;
+    box-shadow: #F5F5F5 2px 2px 10px;
+    height: 100px;
+    position: static;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.appTitle{
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;    
+}
+.navList{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+nav .navList li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav .navList li a:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 5px;
+}
