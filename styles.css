@@ -1,0 +1,39 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+      --primary-color: #E67F22;
+      --secondary-color:#F5F5F5; 
+      --background-color: #FFFFFF;
+    
+  }
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 0 auto ;
+}
+
+.ulFooter{
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.pFooter{
+    text-align: center;
+    font-size: small;
+    border-top: 1px solid;
+    margin-top: 5px;
+    color: var(--secondary-color);
+}
+
+.navFooter{
+    color: var(--primary-color);
+    font-weight: 600;
+}
