@@ -1,0 +1,26 @@
+/* ---------------------------------------- */
+/* ---------------DARK-MODE---------------- */
+/* ---------------------------------------- */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+body.dark-mode .navList{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+body.dark-mode nav .navList li a{
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+body.dark-mode nav .navList li a:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 5px;
+}
