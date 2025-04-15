@@ -9,6 +9,9 @@
     --secondary-color:#F5F5F5; 
     --background-color: #FFFFFF; 
 }
+/* ---------------------------------------- */
+/* -----------------HEADER----------------- */
+/* ---------------------------------------- */
 
 header{
     display: flex;
@@ -75,7 +78,10 @@ nav .navList li a:hover{
     transition: all 0.3s ease-in-out;
 }
 
-/* Dark Mode */
+/* ---------------------------------------- */
+/* ---------------DARK-MODE---------------- */
+/* ---------------------------------------- */
+
 body.dark-mode {
     background-color: #121212;
     color: #FFFFFF;
