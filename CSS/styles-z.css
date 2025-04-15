@@ -37,3 +37,73 @@ a{
     color: var(--primary-color);
     font-weight: 600;
 }
+
+
+
+
+
+/* ---------------------------------------- */
+/* -----------------Recette----------------- */
+/* ---------------------------------------- */
+
+
+.recette{    
+margin-top: 10vh ;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 30vh; /* Ajuste la hauteur à 100% de l'écran */
+background-color: var(--primary-color);
+
+}
+
+h2{
+    background-color: yellowgreen;
+    border: solid 2px green;
+    border-radius: 2px 2px;
+    width: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.category, .time, .difficult, .person{
+    background-color: yellowgreen;
+    border: solid 2px green;
+    border-radius: 2px 2px;
+    width: 0 auto;
+    text-align: center;
+}
+
+.details{
+    margin-top: 300px;
+    display: flex;
+    margin-left: 55vh;
+    flex-direction: column;
+    justify-content: space-around;
+    border: var(--primary-color) solid 3px;
+    border-radius: 30px 0px;
+    width: 50%;
+    padding: 2vh;
+
+}
+
+.steps p{
+    border: #E67F22 solid 3px;
+    border-radius: 20px 0px;
+    padding: 1vh;
+    margin-bottom: 5px;
+
+}
+
+.ingredient p{
+    border: #E67F22 solid 3px;
+    border-radius: 0px 20px;
+    padding: 1vh;
+
+
+}
+
+ol, ul{
+    margin-left: 20px;
+}

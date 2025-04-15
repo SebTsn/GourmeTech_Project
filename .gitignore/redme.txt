@@ -1,1 +1,32 @@
-dad,la,d
+- justify-content: flex-start; (Aligné à gauche)
+- justify-content: flex-end; (Aligné à droite)
+- justify-content: space-between; (Espacement égal entre les éléments)
+- justify-content: space-around; (Espacement équilibré autour des éléments)
+- justify-content: space-evenly; (Espacement uniforme)
+
+
+- align-items: flex-start; (Aligné en haut)
+- align-items: flex-end; (Aligné en bas)
+- align-items: stretch; (Ajuste la hauteur automatiquement)
+- align-items: baseline; (Aligné sur la ligne de base du texte)
+
+
+
+- flex-direction: row; (Par défaut, en ligne)
+- flex-direction: row-reverse; (Inversé de droite à gauche)
+- flex-direction: column-reverse; (Inversé de bas en haut)
+
+
+- flex-shrink: 1; (Permet à l'élément de rétrécir)
+- flex-basis: 200px; (Définit une taille de départ)
+
+
+4. Centrer totalement (horizontal + vertical)
+Si tu veux centrer parfaitement une div :
+css
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste la hauteur à 100% de l'écran */
+}
