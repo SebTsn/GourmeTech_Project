@@ -8,6 +8,8 @@
     --primary-color: #E67F22;
     --secondary-color:#F5F5F5; 
     --background-color: #FFFFFF; 
+    --third-color: #2EC869; 
+    --fourth-color: #3996DB; 
 }
 /* ---------------------------------------- */
 /* -----------------HEADER----------------- */
@@ -78,3 +80,126 @@ nav .navList li a:hover{
     transition: all 0.3s ease-in-out;
 }
 
+/* ---------------------------------------- */
+/* -------------Search Section------------- */
+/* ---------------------------------------- */
+
+.search{
+    border-style: solid;
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-left: 20px;   
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: #F5F5F5 2px 2px 10px;
+    padding: 10px 20px;
+    height: 350px;
+}
+#searchInput{
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 85vw;
+}
+#searchButton{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 10vw;
+}
+.ContainerCategorySearch{
+    display: flex;
+    flex-direction: row;  
+    margin-top: 18px;
+}
+.categorySearch, .DifficultySearch, .TimePrepSearch{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 14rem;
+    height: 10rem;
+    padding-left: 10px;
+}
+.searchName{
+    font-weight: bold;
+}
+
+/* ---------------------------------------- */
+/* -------------Recipe Section------------- */
+/* ---------------------------------------- */
+
+.recettesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.recipePix{
+    height: 400px;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.recetteA, .recetteB, .recetteC{
+    border-style: solid;
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: #F5F5F5 2px 2px 10px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.category{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+.time{
+    background-color: var(--third-color);
+    color: var(--background-color);
+}
+.difficult{
+    background-color: var(--fourth-color);
+    color: var(--background-color);
+}
+
+.category, .time, .difficult{
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;    
+}
+.viewRecipe{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 80%;
+}
+.recipeCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}

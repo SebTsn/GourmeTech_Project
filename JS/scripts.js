@@ -1,4 +1,4 @@
-// Dark Mode
+// Dark Mode 
 
 function darkMode() {
     let element = document.body;
@@ -10,3 +10,14 @@ function darkMode() {
 const darkModeButton = document.querySelector('.dark-mode');
 
 darkModeButton.addEventListener('click', darkMode);
+
+//! like //
+
+const hearts = document.querySelectorAll(".heart");
+
+hearts.forEach((heart) => {
+  heart.addEventListener("click", () => {
+    heart.classList.toggle("active");
+    heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
+  });
+});

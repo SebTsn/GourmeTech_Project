@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    
 
     <link rel="stylesheet" href="/GourmeTech_Project/CSS/styles-s.css">
     <link rel="stylesheet" href="/GourmeTech_Project/CSS/dark-mode.css">
+
+    <title>Accueil</title>
 </head>
 <body>
 
@@ -30,7 +32,126 @@
             <p class="dark dark-mode">🌙</p>
         </div>
     </header>
+
+ <!-- Section pour la recherche  -->
+ <section class="search">
+
+    <div class="searchBar">
+        <input type="text" id="searchInput" placeholder="Rechercher une recette...">
+        <button id="searchButton">Rechercher</button>
+    </div>   
     
+    <div class="ContainerCategorySearch">
+        <div class="categorySearch">
+
+            <p class="searchName">Catégorie</p>
+
+            <div>
+                <input type="checkbox" id="Entrée" name="Entrée" value="Entrée">
+                <label for="Entrée">Entrée</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Plat" name="Plat" value="Plat">
+                <label for="Plat">Plat</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Dessert" name="Dessert" value="Dessert">
+                <label for="Dessert">Dessert</label>
+            </div>
+            
+        </div>
+
+        <div class="TimePrepSearch">
+
+            <p class="searchName">Temps de préparation</p>
+
+            <div>
+                <input type="checkbox" id="Rapide" name="Rapide" value="Rapide">
+                <label for="Rapide">Rapide (< 30 min)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Moyen" name="Moyen" value="Moyen">
+                <label for="Moyen">Moyen (30-60 min)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Long" name="Long" value="Long">
+                <label for="Long">Long (> 60 min)</label>
+            </div>
+        </div>
+
+        <div class="DifficultySearch">
+
+            <p class="searchName">Difficulté</p>
+
+            <div>
+                <input type="checkbox" id="Facile" name="Facile" value="Facile">
+                <label for="Facile">Facile</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Moyen" name="Moyen" value="Moyen">
+                <label for="Moyen">Moyen</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Difficile" name="Difficile" value="Difficile">
+                <label for="Difficile">Difficile</label>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<!-- Section pour les recettes  -->
+
+<section class="recettesContainer">
+
+    <div class="recetteA">
+        <div class="imgcontainer">
+            <span class="heart">🤍</span>
+            <img class="recipePix" src="/GourmeTech_Project/assets/Pix/tarte_aux_pommes.png" alt="tarte_aux_pommes">
+        </div>
+        <div class="recipeCenter">
+            <h2>Tarte aux pommes</h2>
+            <div class="detailsRecipe">
+                <span class="category">Dessert</span>
+                <span class="time">60 min</span>
+                <span class="difficult">Facile</span>
+            </div>
+            <button class="viewRecipe">Voir la recette</button>
+        </div>
+    </div>
+
+    <div class="recetteB">
+        <div class="imgcontainer">
+            <span class="heart">🤍</span>
+            <img class="recipePix" src="" alt="">
+        </div>
+            <div class="recipeCenter">
+            <h2>Ratatouille provençale</h2>
+            <div class="detailsRecipe">
+                <span class="category">Plat</span>
+                <span class="time">45 min</span>
+                <span class="difficult">Moyen</span>
+            </div>
+            <button class="viewRecipe">Voir la recette</button>
+        </div>
+    </div>
+
+    <div class="recetteC">
+        <div class="imgcontainer">
+            <span class="heart">🤍</span>
+            <img class="recipePix" src="" alt="">
+        </div>
+        <div class="recipeCenter">
+            <h2>Velouté de potiron</h2>
+            <div class="detailsRecipe">
+                <span class="category">Entrée</span>
+                <span class="time">30 min</span>
+                <span class="difficult">Facile</span>
+            </div>
+            <button class="viewRecipe">Voir la recette</button>
+        </div>    
+    </div>
+</section>
+
 
 
 
