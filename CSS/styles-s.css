@@ -102,7 +102,7 @@ nav .navList li a:hover{
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: bold;
-    width: 85vw;
+    width: 83vw;
 }
 #searchButton{
     background-color: var(--primary-color);
@@ -166,24 +166,35 @@ nav .navList li a:hover{
     flex-direction: column;
     width: 30%;
 }
+.detailsRecipe{
+    display: flex;
+    flex-direction: row;
+}
 .category{
     background-color: var(--primary-color);
     color: var(--background-color);
+    display: block;
+    width: 80px;
 }
 .time{
     background-color: var(--third-color);
     color: var(--background-color);
+    display: block;
+    width: 80px;
 }
 .difficult{
     background-color: var(--fourth-color);
     color: var(--background-color);
+    display: block;
+    width: 80px;
 }
 
 .category, .time, .difficult{
     padding: 10px;
     border-radius: 30px;
     font-weight: bold;
-    text-align: center;    
+    text-align: center;  
+    margin-right: 10px;  
 }
 .viewRecipe{
     background-color: var(--primary-color);

@@ -6,6 +6,20 @@ body.dark-mode {
     background-color: #121212;
     color: #FFFFFF;
 }
+body.dark-mode header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 20px;   
+  margin-right: 20px;
+  height: 100px;
+  position: static;
+  box-shadow: none;
+}
 body.dark-mode .navList{
     list-style: none;
     display: flex;
@@ -24,6 +38,43 @@ body.dark-mode nav .navList li a:hover{
     padding: 15px;
     border-radius: 5px;
 }
+body.dark-mode .search{
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  margin-left: 20px;   
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  height: 350px;
+  box-shadow: none;
+}
+body.dark-mode .categorySearch,body.dark-mode .DifficultySearch,body.dark-mode .TimePrepSearch{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  border-style: solid;
+  border-color: black;
+  background-color: grey;
+  margin-right: 10px;
+  margin-top: 20px;
+  width: 14rem;
+  height: 10rem;
+  padding-left: 10px;
+  color: #121212;
+}
+body.dark-mode .recetteA,body.dark-mode .recetteB,body.dark-mode .recetteC{
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: none;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
 
 /* ---------------------------------------- */
             /* ! like !! */
@@ -36,6 +87,9 @@ body.dark-mode nav .navList li a:hover{
     font-size: 20px;
     cursor: pointer;
     transition: transform 0.2s ease;
+    background-color: white;
+    border-radius: 50%; 
+    padding: 5px;
   }
   .heart.active {
     transform: scale(1.3);
