@@ -47,3 +47,12 @@ hearts.forEach((heart) => {
     heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
   });
 });
+
+
+//! NavBar Responsive //
+
+const menuBtn = document.querySelector("#btn");
+const liens = document.querySelector("#menu");
+menuBtn.addEventListener('click', function() {
+    liens.classList.toggle('show');
+});

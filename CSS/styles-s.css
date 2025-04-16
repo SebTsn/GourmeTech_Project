@@ -29,6 +29,15 @@ header{
     height: 100px;
     position: static;
 }
+.toggleB{
+    background-color: var(--primary-color);
+    height: 40px;
+    width: 80px;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: none;
+}
 
 .logoContainer{
     display: flex;
