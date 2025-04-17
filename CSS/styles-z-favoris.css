@@ -1,0 +1,82 @@
+:root{
+    --primary-color: #E67F22;
+    --secondary-color:#F5F5F5; 
+    --background-color: #FFFFFF; 
+    --third-color: #2EC869; 
+    --fourth-color: #3996DB;
+}
+
+.favoris{
+    border: solid 2px var(--fourth-color);
+    margin: 5px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.titreFav{
+    margin-top: 20px;
+    margin-left: 100px;
+    color: var(--primary-color);
+}
+
+
+
+.favorisNone{
+    margin-top: 20px;
+    margin-left: 100px;
+    color: black;
+    font-size: 20px;
+    display: none;
+
+}
+
+.recetteF{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    border: #2EC869 solid 2px;
+    border-radius: 5px 2px;
+
+}
+
+.recipeCenterF{
+    display: flex;
+    flex-direction: row;
+}
+
+.suggA{
+    margin-top: 13vh;
+    margin-left: 5vw;
+}
+
+.catego{
+    margin-top: 11vh;
+    margin-left: 5vw;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 20px;
+    height: 4rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+
+/* ---------------------------------------- */
+            /* ! DISlike !! */
+/* ---------------------------------------- */
+.heartDis {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 45%; 
+    padding: 5px;
+    width: 50px;
+}
