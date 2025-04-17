@@ -60,10 +60,17 @@ body.dark-mode .categorySearch,body.dark-mode .DifficultySearch,body.dark-mode .
   background-color: grey;
   margin-right: 10px;
   margin-top: 20px;
-  width: 14rem;
-  height: 10rem;
+  width: 16rem;
+  height: 12rem;
   padding-left: 10px;
   color: #121212;
+}
+body.dark-mode .inputLabel{
+  display: flex;
+  flex-direction: row;
+}
+body.dark-mode input[type=checkbox]{
+  margin-right: 10px;
 }
 body.dark-mode .recetteA,body.dark-mode .recetteB,body.dark-mode .recetteC{
   border-style: solid;
