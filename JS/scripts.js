@@ -56,3 +56,48 @@ const liens = document.querySelector("#menu");
 menuBtn.addEventListener('click', function() {
     liens.classList.toggle('show');
 });
+
+
+//! FAQ Accordéon //
+
+// const btnFAQs = [...document.querySelectorAll('.btnFAQ')]
+
+// btnFAQs.forEach(btnFAQ => btnFAQ.addEventListener("click", btnFAQsAnimation))
+
+// function btnFAQsAnimation(e){
+
+//     const contentFAQs = [...document.querySelectorAll(".contentFAQ")]
+
+//     const indexToRemove = btnFAQs.findIndex(btnFAQ => btnFAQ.classList.contains("active-tab"))
+
+//     btnFAQs[indexToRemove].classList.remove("active-tab");
+//     contentFAQs[indexToRemove].classList.remove("active-tab-content");
+
+//     const indexToShow = btnFAQs.indexOf(e.target)
+
+//     btnFAQs[indexToShow].classList.add("active-tab");
+//     contentFAQs[indexToShow].classList.add("active-tab-content");
+// }
+
+const btnFAQs = [...document.querySelectorAll('.btnFAQ')];
+
+btnFAQs.forEach(btnFAQ => btnFAQ.addEventListener("click", btnFAQsAnimation));
+
+function btnFAQsAnimation(e) {
+    const contentFAQs = [...document.querySelectorAll(".contentFAQ")];
+
+    const indexToRemove = btnFAQs.findIndex(btn => btn.classList.contains("active-tab"));
+    if (indexToRemove !== -1) {
+        btnFAQs[indexToRemove].classList.remove("active-tab");
+        contentFAQs[indexToRemove].classList.remove("active-tab-content");
+    }
+
+    const indexToShow = btnFAQs.indexOf(e.currentTarget);
+    btnFAQs[indexToShow].classList.add("active-tab");
+    contentFAQs[indexToShow].classList.add("active-tab-content");
+}
+
+// e.currentTarget
+// Ca fait toujours référence à l’élément sur lequel l’écouteur d’événement est attaché, donc ici le <button>, peu importe si tu cliques sur le <strong> à l’intérieur.
+// e.target ne correspond pas à un élément de btnFAQs
+// donc indexToShow vaut -1, ce qui cause des bugs ou aucun affichage.

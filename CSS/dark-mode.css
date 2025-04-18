@@ -57,7 +57,7 @@ body.dark-mode .categorySearch,body.dark-mode .DifficultySearch,body.dark-mode .
   align-items: start;
   border-style: solid;
   border-color: black;
-  background-color: grey;
+  background-color: #333;
   margin-right: 10px;
   margin-top: 20px;
   width: 16rem;

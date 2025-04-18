@@ -51,13 +51,13 @@
             <h2 class="titleAP">Contact</h2>
             <form class="formulaire" action="">
                 <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre message ici..."></textarea>
 
                 <button id="contactBtn" type="submit">Envoyer</button>
             </form>
@@ -69,14 +69,15 @@
         <h2 class="titleAP" id="titleAPFaq">FAQ</h2>
 
         <div class="faq-content">
-            <p><strong>Comment ajouter une recette ?</strong></p>
-            <p>Pour ajouter une recette, allez dans la section "Ajouter une recette" et remplissez le formulaire avec les détails de votre plat.</p>
 
-            <p><strong>Comment sauvegarder mes recettes préférées ?</strong></p>
-            <p>Vous pouvez sauvegarder vos recettes préférées en cliquant sur le bouton "Ajouter aux favoris" sur la page de chaque recette.</p>
+            <h3><button class="btnFAQ"><strong>Comment ajouter une recette ?</strong></button></h3>
+            <p class="contentFAQ">Pour ajouter une recette, allez dans la section "Ajouter une recette" et remplissez le formulaire avec les détails de votre plat.</p>
 
-            <p><strong>Comment contacter l'équipe de GourmeTech ?</strong></p>
-            <p>Vous pouvez nous contacter via le formulaire de contact ci-dessus ou par email à </p>
+            <h3><button class="btnFAQ"><strong>Comment sauvegarder mes recettes préférées ?</strong></button></h3>
+            <p class="contentFAQ">Vous pouvez sauvegarder vos recettes préférées en cliquant sur le bouton "Ajouter aux favoris" sur la page de chaque recette.</p>
+
+            <h3><button class="btnFAQ"><strong>Comment contacter l'équipe de GourmeTech ?</strong></button></h3>
+            <p class="contentFAQ">Vous pouvez nous contacter via le formulaire de contact ci-dessus ou par email à exemple@email.com</p>
         </div>
     </div>
 
