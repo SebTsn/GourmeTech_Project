@@ -10,6 +10,13 @@
     --background-color: #FFFFFF; 
     --third-color: #2EC869; 
     --fourth-color: #3996DB; 
+
+    --primary-font: "Special Gothic Expanded One", sans-serif;
+    --secondary-font: "Exo 2", sans-serif;
+    --third-font: "Open Sans", sans-serif;
+}
+body{
+    font-family: var(--third-font);
 }
 /* ---------------------------------------- */
 /* -----------------HEADER----------------- */
@@ -46,7 +53,7 @@ header{
 }
 
 .logoG{
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--background-color);
     font-weight: bold;
     background-color: var(--primary-color) ;
@@ -58,12 +65,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--primary-font);
 }
 
 .appTitle{
     font-size: 2rem;
     color: var(--primary-color);
-    font-weight: bold;    
+    font-weight: bold; 
+    font-family: var(--primary-font);   
 }
 .navList{
     list-style: none;
@@ -76,6 +85,7 @@ nav .navList li a{
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
+    font-family: var(--secondary-font);
 }
 nav .navList li a:hover{
     color: var(--primary-color);
@@ -249,6 +259,7 @@ input[type=checkbox]{
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: var(--secondary-font);
 }
 .container_info_contact{
     margin-top: 100px;
@@ -276,6 +287,10 @@ input[type=checkbox]{
     border-radius: 500px;
     box-shadow: var(--primary-color) 4px -4px 8px;
     padding: 20px;
+}
+.infos-content p{
+    width: 80%;
+    font-size: large;
 }
 .contact{
     width: 25vw;
