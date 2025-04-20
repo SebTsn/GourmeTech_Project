@@ -28,12 +28,33 @@
         border-style: solid;
         border-color: var(--primary-color);
         border-radius: 5px;
-        /* position: absolute; */
-        /* right: 0.5rem;
-        top: 0.2rem; */
+        position: absolute; 
+        right: 6rem;
+        top: 1rem; 
     } 
     .navList.show{
         display: block;
+        font-size: large;
+        width: 100%;
+        margin-top: 10vh;
+    }
+
+    .search{
+        height: max-content;
+    }
+    #searchButton{
+        width: 30%;
+        font-size: 1rem;
+    }
+
+    .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .recetteA, .recetteB, .recetteC{
+        width: 80%;
+        margin-bottom: 25px;
+
     }
     
 }
