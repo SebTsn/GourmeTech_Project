@@ -101,3 +101,23 @@ function btnFAQsAnimation(e) {
 // Ca fait toujours référence à l’élément sur lequel l’écouteur d’événement est attaché, donc ici le <button>, peu importe si tu cliques sur le <strong> à l’intérieur.
 // e.target ne correspond pas à un élément de btnFAQs
 // donc indexToShow vaut -1, ce qui cause des bugs ou aucun affichage.
+
+//! Section Recherche //
+
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
+
+searchButton.addEventListener("click", function() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        const cardTitle = card.querySelector("h2").textContent.toLowerCase();
+        if (cardTitle.includes(searchTerm)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+

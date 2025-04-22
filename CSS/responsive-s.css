@@ -1,43 +1,65 @@
-@media(max-width: 767px){
-    
-    nav{
+/* ---------------------------------------- */
+/* -------------Version Mobile------------- */
+/* ---------------------------------------- */
+
+@media(320px <= width <= 767px){
+    header{
         width: 100%;
-        flex-direction: row-reverse;
-        justify-content: center;
     }
-
+    .logoContainer{
+        position: relative;
+    }
+    .appTitle{
+        width: auto;
+    }
     .navList{
-        flex-direction: column;
         display: none;
-        margin: 0 auto;
     }
-
-    .navList .item{
-        box-sizing: border-box;
+    .navList.show{
         display: block;
-        font-size: 1.5rem;
-        justify-content: center;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
         align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navList.show li a{
+        font-size: 1.5rem;
+        color: var(--primary-color);
     }
     .toggleB{
         display: block;
         margin-bottom: 20px;
-        width: 80px;
+        width: 60px;
         cursor: pointer;
-        color: var(--background-color);
-        border-style: solid;
-        border-color: var(--primary-color);
+        /* color: var(--background-color); */
+        border-style: none;
+        /* border-color: var(--primary-color); */
         border-radius: 5px;
-        position: absolute; 
+        /* position: absolute;  */
         right: 6rem;
         top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
     } 
-    .navList.show{
-        display: block;
-        font-size: large;
-        width: 100%;
-        margin-top: 10vh;
+    .dark{
+        display: none;
     }
+    .dark1{
+        display: block;
+    }
+   
 
     .search{
         height: max-content;
@@ -59,4 +81,57 @@
     
 }
     
+/* ---------------------------------------- */
+/* ------------Version Tablette------------ */
+/* ---------------------------------------- */
 
+@media(768px <= width <= 1023px){
+    .logoContainer{
+        position: relative;
+    }
+    .navList{
+        display: none;
+    }
+    .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    .navList.show li a{
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+    .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        color: var(--background-color);
+        border-style: solid;
+        border-color: var(--primary-color);
+        border-radius: 5px;
+        position: absolute; 
+        right: 6rem;
+        top: 1rem; 
+    } 
+    .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .recetteA, .recetteB, .recetteC{
+        width: 40%;
+        margin-bottom: 25px;
+    }
+}

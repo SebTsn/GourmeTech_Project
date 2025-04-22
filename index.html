@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
-    <link rel="stylesheet" href="/GourmeTech_Project/CSS/styles-s.css">
-    <link rel="stylesheet" href="/GourmeTech_Project/CSS/dark-mode.css">
-    <link rel="stylesheet" href="/GourmeTech_Project/CSS/responsive-s.css">
+    <link rel="stylesheet" href="/CSS/styles-s.css">
+    <link rel="stylesheet" href="/CSS/dark-mode.css">
+    <link rel="stylesheet" href="/CSS/responsive-s.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,31 +19,31 @@
 <body>
 
 <!-- Logo, titre et barre de navigation  -->
-    <header>
+<header>
 
-        <div class="logoContainer">
-            <span class="logoG">G</span>
-            <h1 class="appTitle">GourmeTech</h1>
-        </div>
+    <div class="logoContainer">
+        <span class="logoG">G</span>
+        <h1 class="appTitle">GourmeTech</h1>
+    </div>
 
-        <nav>
+    <nav>
 
-            <button class="toggleB" id="btn"><span class="material-symbols-outlined">
-                menu
-                </span></button>
+        <button class="toggleB" id="btn"></button>
 
-            <ul id="menu" class="navList">
-                <li class="item"><a href="index.html">Accueil</a></li>
-                <li class="item"><a href="recette.html">Ajouter une recette</a></li>
-                <li class="item"><a href="favoris.html">Mes favoris</a></li>
-                <li class="item"><a href="a-propos.html">À propos</a></li>
-            </ul>
-        </nav>
+        <ul id="menu" class="navList">
+            <li class="item"><a href="index.html">Accueil</a></li>
+            <li class="item"><a href="recette.html">Ajouter une recette</a></li>
+            <li class="item"><a href="favoris.html">Mes favoris</a></li>
+            <li class="item"><a href="a-propos.html">À propos</a></li>
+            <li class="item"><p class="dark1 dark-mode">🌙</p></li>
+            
+        </ul>
+    </nav>
 <!-- Logo pour le passage en Dark-mode  -->
-        <div>
-            <p class="dark dark-mode">🌙</p>
-        </div>
-    </header>
+    <!-- <div>
+        <p class="dark dark-mode">🌙</p>
+    </div> -->
+</header>
 
  <!-- Section pour la recherche  -->
  <section class="search">
@@ -115,10 +115,10 @@
 
 <section class="recettesContainer">
 
-    <div class="recetteA">
+    <div class="recetteA card">
         <div class="imgcontainer">
             <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/GourmeTech_Project/assets/Pix/tarte_aux_pommes.png" alt="tarte_aux_pommes">
+            <img class="recipePix" src="/assets/Pix/tarte_aux_pommes.png" alt="tarte_aux_pommes">
         </div>
         <div class="recipeCenter">
             <h2>Tarte aux pommes</h2>
@@ -131,10 +131,10 @@
         </div>
     </div>
 
-    <div class="recetteB">
+    <div class="recetteB card">
         <div class="imgcontainer">
             <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/GourmeTech_Project/assets/Pix/ratatouille1.jpg" alt="">
+            <img class="recipePix" src="/assets/Pix/ratatouille1.jpg" alt="">
         </div>
             <div class="recipeCenter">
             <h2>Ratatouille provençale</h2>
@@ -147,10 +147,10 @@
         </div>
     </div>
 
-    <div class="recetteC">
+    <div class="recetteC card">
         <div class="imgcontainer">
             <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/GourmeTech_Project/assets/Pix/velouté_potiron.jpg" alt="">
+            <img class="recipePix" src="/assets/Pix/velouté_potiron.jpg" alt="">
         </div>
         <div class="recipeCenter">
             <h2>Velouté de potiron</h2>
@@ -170,6 +170,6 @@
 
 
 
-    <script src="/GourmeTech_Project/JS/scripts.js"></script>
+    <script src="/JS/scripts.js"></script>
 </body>
 </html>
