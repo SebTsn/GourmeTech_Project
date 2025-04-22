@@ -22,14 +22,8 @@ disLikes.forEach((disLike) => {
 
 
     })
+
+    
 })
 
-let titreF = document.querySelector(".favorisNone")
 
-
-for (i =)
-
-if(disLikes){
-    titreF.style.display="none"
-} else {
-    titreF.style.display="block"}
