@@ -3,8 +3,16 @@
 /* ---------------------------------------- */
 
 @media(320px <= width <= 767px){
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
     header{
         width: 100%;
+        margin-right: 20px;
+        border: 0;
+        margin: 0;
     }
     .logoContainer{
         position: relative;
@@ -14,6 +22,7 @@
     }
     .navList{
         display: none;
+        align-items: center;
     }
     .navList.show{
         display: block;
@@ -60,13 +69,23 @@
         display: block;
     }
    
+    /* -------------Search Section------------- */
+
+    .searchBar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .search{
         height: max-content;
     }
+    #searchInput{
+        width: 100%;
+    }
     #searchButton{
-        width: 30%;
-        font-size: 1rem;
+        width: 35%;
+        font-size: 0.8rem;
     }
 
     .recettesContainer{
@@ -78,14 +97,46 @@
         margin-bottom: 25px;
 
     }
-    
+ 
+    /* -------------Infos Section------------- */
+
+    .container_info_contact{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 800px;
+    }
+    .infos{
+        width: 90%;
+        height: 800px;
+    }
+    .infos-content p{
+        font-size: 1rem;
+        padding: 10px;
+        text-align: center;
+    }
+    .contact{
+        width: 90%;
+    }
+    .faq{
+        width: 90%;
+    }
 }
+
+
+
+
+
     
 /* ---------------------------------------- */
 /* ------------Version Tablette------------ */
 /* ---------------------------------------- */
 
 @media(768px <= width <= 1023px){
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
     .logoContainer{
         position: relative;
     }
@@ -110,7 +161,7 @@
 
     }
     .navList.show li a{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         color: var(--primary-color);
     }
     .toggleB{
@@ -118,20 +169,63 @@
         margin-bottom: 20px;
         width: 60px;
         cursor: pointer;
-        color: var(--background-color);
-        border-style: solid;
-        border-color: var(--primary-color);
+        border-style: none;
         border-radius: 5px;
-        position: absolute; 
         right: 6rem;
         top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
     } 
+
+     /* -------------Search Section------------- */
+
+     .searchBar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search{
+        height: max-content;
+    }
+    #searchInput{
+        width: 100%;
+    }
+    #searchButton{
+        width: 35%;
+        font-size: 1.5rem;
+    }
     .recettesContainer{
         display: flex;
         flex-wrap: wrap;
     }
     .recetteA, .recetteB, .recetteC{
-        width: 40%;
+        width: 45%;
         margin-bottom: 25px;
     }
+
+        /* -------------Infos Section------------- */
+
+        .container_info_contact{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 800px;
+        }
+        .infos{
+            width: 82%;
+            height: 800px;
+        }
+        .infos-content p{
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact{
+            width: 70%;
+        }
+        .faq{
+            width: 70%;
+        }
 }

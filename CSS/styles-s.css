@@ -188,6 +188,9 @@ input[type=checkbox]{
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
+.recipeTitle{
+    font-family: var(--secondary-font);
+}
 .recetteA, .recetteB, .recetteC{
     border-style: solid;
     border-color: var(--secondary-color);
