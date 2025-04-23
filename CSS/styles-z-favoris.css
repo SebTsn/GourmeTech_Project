@@ -86,3 +86,106 @@
   
 }
   
+
+
+/* ---------------------------------------- */
+            /* ! RESPONSIVE MOBILE !! */
+/* ---------------------------------------- */
+
+@media(320px <= width <= 767px){
+
+.titreFav{
+    margin-left: 1rem;
+    height: 100%;
+}
+
+.favorisNone{
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.recetteF{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 2rem;
+}
+
+.suggA{
+    margin-top: 7px;
+    text-align: center;
+}
+
+.catego{
+    margin-top: 7px;
+    text-align: center;
+    width: 8rem;
+    margin-left: 5.2rem;
+    font-size: 22px;
+}
+
+.heartDis{
+    margin-top: 7px;
+    margin-left: 7rem;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction:column-reverse;
+}
+
+.navFooter{
+    width: 100%;
+    margin-bottom: 8px;
+
+}
+
+.gFooter{
+    margin-bottom: 20px;
+}
+
+    
+
+}   
+
+
+
+
+
+
+
+/* ---------------------------------------- */
+/* ------------Version Tablette------------ */
+/* ---------------------------------------- */
+@media(768px <= width <= 1023px){
+ 
+
+h2{
+    font-size: 1em;
+}
+
+.suggA{
+    margin-top: 6.5rem;
+    margin-left: 1rem;
+
+}
+
+.catego{
+    margin-top: 5.2rem;
+}
+
+.heartDis{
+    margin-top: 5rem;
+}
+
+.footer div{
+    width: 50%;
+}
+
+.navFooter{
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+}
