@@ -6,6 +6,9 @@ body.dark-mode {
     background-color: #121212;
     color: #FFFFFF;
 }
+
+/* ----------------Header----------------- */
+
 body.dark-mode header{
   display: flex;
   flex-direction: row;
@@ -38,6 +41,9 @@ body.dark-mode nav .navList li a:hover{
     padding: 15px;
     border-radius: 5px;
 }
+
+/* ----------------Search----------------- */
+
 body.dark-mode .search{
   border-style: solid;
   border-color: black;
@@ -72,6 +78,13 @@ body.dark-mode .inputLabel{
 body.dark-mode input[type=checkbox]{
   margin-right: 10px;
 }
+body.dark-mode .inputLabel, body.dark-mode .searchName{
+  font-weight: normal;
+  color: var(--primary-color);
+}
+
+/* ----------------Recipe----------------- */
+
 body.dark-mode .recetteA,body.dark-mode .recetteB,body.dark-mode .recetteC{
   border-style: solid;
   border-color: black;
@@ -80,7 +93,7 @@ body.dark-mode .recetteA,body.dark-mode .recetteB,body.dark-mode .recetteC{
   height: 600px;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 25%;
 }
 
 /* ---------------------------------------- */

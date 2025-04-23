@@ -87,6 +87,16 @@
         width: 35%;
         font-size: 0.8rem;
     }
+    .no-result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    /* -------------Recipe Section------------- */
 
     .recettesContainer{
         display: flex;
@@ -120,13 +130,86 @@
     .faq{
         width: 90%;
     }
+
+    /* ------------Dark-Mode Mobile------------ */
+    /* ---------------------------------------- */
+
+    body.dark-mode header{
+        width: 100%;
+        margin-right: 20px;
+        border: 0;
+        margin: 0;
+    }
+    body.dark-mode .navList{
+        display: none;
+        align-items: center;
+    }
+    body.dark-mode .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    body.dark-mode .navList.show li a{
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+    body.dark-mode .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        /* color: var(--background-color); */
+        border-style: none;
+        /* border-color: var(--primary-color); */
+        border-radius: 5px;
+        /* position: absolute;  */
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    } 
+    body.dark-mode .dark{
+        display: none;
+    }
+    body.dark-mode .dark1{
+        display: block;
+    }
+
+    /* -------------Search Section------------- */
+
+    body.dark-mode .search{
+        height: max-content;
+    }
+
+     /* -------------Recipe Section------------- */
+
+     body.dark-mode .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body.dark-mode .recetteA, body.dark-mode .recetteB, body.dark-mode .recetteC{
+        width: 80%;
+        margin-bottom: 25px;
+
+    }
 }
 
-
-
-
-
-    
+  
 /* ---------------------------------------- */
 /* ------------Version Tablette------------ */
 /* ---------------------------------------- */
@@ -197,6 +280,16 @@
         width: 35%;
         font-size: 1.5rem;
     }
+    .no-result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        display: none;
+    }
+
+    /* -------------Recipe Section------------- */
+    
     .recettesContainer{
         display: flex;
         flex-wrap: wrap;
@@ -206,26 +299,88 @@
         margin-bottom: 25px;
     }
 
-        /* -------------Infos Section------------- */
+    /* -------------Infos Section------------- */
 
-        .container_info_contact{
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 800px;
-        }
-        .infos{
-            width: 82%;
-            height: 800px;
-        }
-        .infos-content p{
-            font-size: 1.2rem;
-            padding: 10px;
-            text-align: center;
-        }
-        .contact{
-            width: 70%;
-        }
-        .faq{
-            width: 70%;
-        }
+    .container_info_contact{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 800px;
+    }
+    .infos{
+        width: 82%;
+        height: 800px;
+    }
+    .infos-content p{
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+     }
+    .contact{
+        width: 70%;
+    }
+    .faq{
+        width: 70%;
+    }
+
+    /* -----------Dark-Mode Tablette----------- */
+    /* ---------------------------------------- */
+
+    body.dark-mode .navList{
+        display: none;
+    }
+    
+    body.dark-mode .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    body.dark-mode .navList.show li a{
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+    body.dark-mode .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 5px;
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+
+    /* -------------Search Section------------- */
+
+    body.dark-mode .search{
+        height: max-content;
+    }
+
+     /* -------------Recipe Section------------- */
+
+     body.dark-mode .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body.dark-mode .recetteA, body.dark-mode .recetteB, body.dark-mode .recetteC{
+        width: 45%;
+        margin-bottom: 25px;
+    }
+
 }

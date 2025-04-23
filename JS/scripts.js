@@ -104,20 +104,88 @@ function btnFAQsAnimation(e) {
 
 //! Section Recherche //
 
-const searchInput = document.querySelector("#searchInput");
-const searchButton = document.querySelector("#searchButton");
+//** Barre de recherche **/
 
-searchButton.addEventListener("click", function() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const cards = document.querySelectorAll(".card");
+// const searchInput = document.querySelector("#searchInput");
+// const searchButton = document.querySelector("#searchButton");
 
+// searchButton.addEventListener("click", function() {
+//     const searchTerm = searchInput.value.toLowerCase();
+//     const cards = document.querySelectorAll(".card");
+
+//     cards.forEach(card => {
+//         const cardTitle = card.querySelector("h2").textContent.toLowerCase();
+//         if (cardTitle.includes(searchTerm)) {
+//             card.style.display = "block";
+//         } else {
+//             card.style.display = "none";
+//         }
+//     });
+// });
+
+
+//** Barre de recherche 2**/
+
+
+document.querySelector('#searchButton').addEventListener('click', () => {
+    const searchText = document.querySelector('#searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    const noResult = document.querySelector('.no-result'); 
+  
+ 
+    //! Récupération des filtres cochés
+    
+    const Checked = (name) =>   // ? recuperation en liste 
+      Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(input => input.value);  // ? Array. transformation en tableau + .map  parcourt chaque element extrait de la valeur 
+  
+    
+   //! Récupération des filtres 
+    
+    const selectedCategories = Checked('category1');
+    const selectedTimes = Checked('time1');
+    const selectedDifficulties = Checked('difficulty');
+  
+    //! compte le nombre de card trouvées 
+  
+    let result = 0;
+  
+    //! recuperation des infos de chaque carte
+  
     cards.forEach(card => {
-        const cardTitle = card.querySelector("h2").textContent.toLowerCase();
-        if (cardTitle.includes(searchTerm)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+      const title = card.querySelector('.recipeTitle').textContent.toLowerCase();
+      const type = card.querySelector('.category').textContent.toLowerCase();
+      const duration = card.querySelector('.time').textContent;
+      const difficulty = card.querySelector('.difficult').textContent;
+  
+      const verifText = title.includes(searchText);
+      const verifCategory = selectedCategories.length ? selectedCategories.includes(type) : true;
+  
+  
+      //! passé temps => minute 
+  
+      const minutes = parseInt(duration);
+      let time = '';
+      if (minutes < 15) time = '-15';
+      else if (minutes <= 30) time = '15-30';
+      else time = '+30';
+  
+      const verifTime = selectedTimes.length ? selectedTimes.includes(time) : true;
+      const verifDifficulty = selectedDifficulties.length ? selectedDifficulties.includes(difficulty) : true;
+  
+      //! affiche les card rechercher 
+  
+      if (verifText && verifCategory && verifTime && verifDifficulty) {
+        card.style.display = 'block';
+        result++;
+      } else {
+        card.style.display = 'none';
+      }
     });
-});
+  
+    //!  Affiche le message "Aucune recette trouvée 😢"
+    
+    noResult.style.display = result === 0 ? 'block' : 'none';
+  });
 
+
+//! Validation Formulaire //

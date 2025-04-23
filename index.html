@@ -56,20 +56,21 @@
     </div>   
     
     <div class="ContainerCategorySearch">
+
         <div class="categorySearch">
 
             <p class="searchName">Catégorie</p>
 
             <div class="inputLabel">
-                <input type="checkbox" id="Entrée" name="Entrée" value="Entrée">
+                <input type="checkbox" id="Entrée" name="category1" value="entrée">
                 <label for="Entrée">Entrée</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Plat" name="Plat" value="Plat">
+                <input type="checkbox" id="Plat" name="category1" value="plat">
                 <label for="Plat">Plat</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Dessert" name="Dessert" value="Dessert">
+                <input type="checkbox" id="Dessert" name="category1" value="dessert">
                 <label for="Dessert">Dessert</label>
             </div>
             
@@ -80,15 +81,15 @@
             <p class="searchName">Temps de préparation</p>
 
             <div class="inputLabel">
-                <input type="checkbox" id="Rapide" name="Rapide" value="Rapide">
+                <input type="checkbox" id="Rapide" name="time1" value="-15">
                 <label for="Rapide">Rapide (< 30 min)</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Moyen" name="Moyen" value="Moyen">
+                <input type="checkbox" id="Moyen" name="time1" value="15-30">
                 <label for="Moyen">Moyen (30-60 min)</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Long" name="Long" value="Long">
+                <input type="checkbox" id="Long" name="time1" value="+30">
                 <label for="Long">Long (> 60 min)</label>
             </div>
         </div>
@@ -98,19 +99,20 @@
             <p class="searchName">Difficulté</p>
 
             <div class="inputLabel">
-                <input type="checkbox" id="Facile" name="Facile" value="Facile">
+                <input type="checkbox" id="Facile" name="difficulty" value="Facile">
                 <label for="Facile">Facile</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Moyen" name="Moyen" value="Moyen">
+                <input type="checkbox" id="Moyen" name="difficulty" value="Moyen">
                 <label for="Moyen">Moyen</label>
             </div>
             <div class="inputLabel">
-                <input type="checkbox" id="Difficile" name="Difficile" value="Difficile">
+                <input type="checkbox" id="Difficile" name="difficulty" value="Difficile">
                 <label for="Difficile">Difficile</label>
             </div>
         </div>
     </div>
+
  </section>
 
 <!-- Section pour les recettes  -->
@@ -164,7 +166,12 @@
             <button class="viewRecipe">Voir la recette</button>
         </div>    
     </div>
+
 </section>
+
+<p class="no-result">Aucun résultat trouvé, veuillez modifier vos recherches...</p>
+
+
 
 
 
