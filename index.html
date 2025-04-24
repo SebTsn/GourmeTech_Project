@@ -47,129 +47,132 @@
 
 </header>
 
- <!-- Section pour la recherche  -->
- <section class="search">
+<main>
+    <!-- Section pour la recherche  -->
+    <section class="search">
 
-    <div class="searchBar">
-        <input type="text" id="searchInput" placeholder="Rechercher une recette...">
-        <button id="searchButton">Rechercher</button>
-    </div>   
-    
-    <div class="ContainerCategorySearch">
+        <div class="searchBar">
+            <input type="text" id="searchInput" placeholder="Rechercher une recette...">
+            <button id="searchButton">Rechercher</button>
+        </div>   
+        
+        <div class="ContainerCategorySearch">
 
-        <div class="categorySearch">
+            <div class="categorySearch">
 
-            <p class="searchName">Catégorie</p>
+                <p class="searchName">Catégorie</p>
 
-            <div class="inputLabel">
-                <input type="checkbox" id="Entrée" name="category1" value="entrée">
-                <label for="Entrée">Entrée</label>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Entrée" name="category1" value="entrée">
+                    <label for="Entrée">Entrée</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Plat" name="category1" value="plat">
+                    <label for="Plat">Plat</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Dessert" name="category1" value="dessert">
+                    <label for="Dessert">Dessert</label>
+                </div>
+                
             </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Plat" name="category1" value="plat">
-                <label for="Plat">Plat</label>
+
+            <div class="TimePrepSearch">
+
+                <p class="searchName">Temps de préparation</p>
+
+                <div class="inputLabel">
+                    <input type="checkbox" id="Rapide" name="time1" value="-15">
+                    <label for="Rapide">Rapide (< 30 min)</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Moyen" name="time1" value="15-30">
+                    <label for="Moyen">Moyen (30-60 min)</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Long" name="time1" value="+30">
+                    <label for="Long">Long (> 60 min)</label>
+                </div>
             </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Dessert" name="category1" value="dessert">
-                <label for="Dessert">Dessert</label>
+
+            <div class="DifficultySearch">
+
+                <p class="searchName">Difficulté</p>
+
+                <div class="inputLabel">
+                    <input type="checkbox" id="Facile" name="difficulty" value="Facile">
+                    <label for="Facile">Facile</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Moyen" name="difficulty" value="Moyen">
+                    <label for="Moyen">Moyen</label>
+                </div>
+                <div class="inputLabel">
+                    <input type="checkbox" id="Difficile" name="difficulty" value="Difficile">
+                    <label for="Difficile">Difficile</label>
+                </div>
             </div>
-            
         </div>
 
-        <div class="TimePrepSearch">
+    </section>
 
-            <p class="searchName">Temps de préparation</p>
+    <!-- Section pour les recettes  -->
 
-            <div class="inputLabel">
-                <input type="checkbox" id="Rapide" name="time1" value="-15">
-                <label for="Rapide">Rapide (< 30 min)</label>
+    <section class="recettesContainer">
+
+        <div class="recetteA card">
+            <div class="imgcontainer">
+                <span title="Ajouter aux favoris" class="heart">🤍</span>
+                <img class="recipePix" src="/assets/Pix/tarte_aux_pommes.png" alt="tarte_aux_pommes">
             </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Moyen" name="time1" value="15-30">
-                <label for="Moyen">Moyen (30-60 min)</label>
-            </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Long" name="time1" value="+30">
-                <label for="Long">Long (> 60 min)</label>
-            </div>
-        </div>
-
-        <div class="DifficultySearch">
-
-            <p class="searchName">Difficulté</p>
-
-            <div class="inputLabel">
-                <input type="checkbox" id="Facile" name="difficulty" value="Facile">
-                <label for="Facile">Facile</label>
-            </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Moyen" name="difficulty" value="Moyen">
-                <label for="Moyen">Moyen</label>
-            </div>
-            <div class="inputLabel">
-                <input type="checkbox" id="Difficile" name="difficulty" value="Difficile">
-                <label for="Difficile">Difficile</label>
-            </div>
-        </div>
-    </div>
-
- </section>
-
-<!-- Section pour les recettes  -->
-
-<section class="recettesContainer">
-
-    <div class="recetteA card">
-        <div class="imgcontainer">
-            <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/assets/Pix/tarte_aux_pommes.png" alt="tarte_aux_pommes">
-        </div>
-        <div class="recipeCenter">
-            <h2 class="recipeTitle">Tarte aux pommes</h2>
-            <div class="detailsRecipe">
-                <span class="category">Dessert</span>
-                <span class="time">60 min</span>
-                <span class="difficult">Facile</span>
-            </div>
-            <button class="viewRecipe">Voir la recette</button>
-        </div>
-    </div>
-
-    <div class="recetteB card">
-        <div class="imgcontainer">
-            <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/assets/Pix/ratatouille1.jpg" alt="">
-        </div>
             <div class="recipeCenter">
-            <h2 class="recipeTitle">Ratatouille provençale</h2>
-            <div class="detailsRecipe">
-                <span class="category">Plat</span>
-                <span class="time">45 min</span>
-                <span class="difficult">Moyen</span>
+                <h2 class="recipeTitle">Tarte aux pommes</h2>
+                <div class="detailsRecipe">
+                    <span class="category">Dessert</span>
+                    <span class="time">60 min</span>
+                    <span class="difficult">Facile</span>
+                </div>
+                <button class="viewRecipe">Voir la recette</button>
             </div>
-            <button class="viewRecipe">Voir la recette</button>
         </div>
-    </div>
 
-    <div class="recetteC card">
-        <div class="imgcontainer">
-            <span title="Ajouter aux favoris" class="heart">🤍</span>
-            <img class="recipePix" src="/assets/Pix/velouté_potiron.jpg" alt="">
-        </div>
-        <div class="recipeCenter">
-            <h2 class="recipeTitle">Velouté de potiron</h2>
-            <div class="detailsRecipe">
-                <span class="category">Entrée</span>
-                <span class="time">30 min</span>
-                <span class="difficult">Facile</span>
+        <div class="recetteB card">
+            <div class="imgcontainer">
+                <span title="Ajouter aux favoris" class="heart">🤍</span>
+                <img class="recipePix" src="/assets/Pix/ratatouille1.jpg" alt="">
             </div>
-            <button class="viewRecipe">Voir la recette</button>
-        </div>    
-    </div>
+                <div class="recipeCenter">
+                <h2 class="recipeTitle">Ratatouille provençale</h2>
+                <div class="detailsRecipe">
+                    <span class="category">Plat</span>
+                    <span class="time">45 min</span>
+                    <span class="difficult">Moyen</span>
+                </div>
+                <button class="viewRecipe">Voir la recette</button>
+            </div>
+        </div>
 
-</section>
+        <div class="recetteC card">
+            <div class="imgcontainer">
+                <span title="Ajouter aux favoris" class="heart">🤍</span>
+                <img class="recipePix" src="/assets/Pix/velouté_potiron.jpg" alt="">
+            </div>
+            <div class="recipeCenter">
+                <h2 class="recipeTitle">Velouté de potiron</h2>
+                <div class="detailsRecipe">
+                    <span class="category">Entrée</span>
+                    <span class="time">30 min</span>
+                    <span class="difficult">Facile</span>
+                </div>
+                <button class="viewRecipe">Voir la recette</button>
+            </div>    
+        </div>
 
-<p class="no-result">Aucun résultat trouvé, veuillez modifier vos recherches...</p>
+    </section>
+
+    <p class="no-result">Aucun résultat trouvé, veuillez modifier vos recherches...</p>
+
+</main>
 
 
 
