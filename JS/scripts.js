@@ -55,6 +55,10 @@ const menuBtn = document.querySelector("#btn");
 const liens = document.querySelector("#menu");
 menuBtn.addEventListener('click', function() {
     liens.classList.toggle('show');
+      const menuBtnClose = document.querySelector(".close");
+      menuBtnClose.addEventListener('click', function() {
+        liens.classList.toggle('show');
+    })
 });
 
 
@@ -189,3 +193,41 @@ document.querySelector('#searchButton').addEventListener('click', () => {
 
 
 //! Validation Formulaire //
+
+
+
+
+//! Ranking //
+
+// let recipeStar = localStorage.getItem("recipeStar");
+
+document.querySelectorAll('.notation').forEach(notation => {
+  const stars = notation.querySelectorAll('.star');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      //!  Supprime les classes "selected" de toutes les étoiles
+      stars.forEach(s => s.classList.remove('selected'));
+
+      //!  Ajoute "selected" jusqu’à l’étoile cliquée
+      for (let i = 0; i <= index; i++) {
+        stars[i].classList.add('selected');
+      }
+      // //!  Enregistre la note dans le localStorage
+      // localStorage.setItem("recipeStar", recipeStar);
+      // //!  Enregistre la note dans le localStorage
+      // localStorage.setItem("notation", notation.getAttribute('data-notation'));
+      // //!  Enregistre la note dans le localStorage
+      // localStorage.setItem("note", star.getAttribute('data-value'));
+
+      //!  Facultatif : stocker la note dans un attribut ou log
+      const note = star.getAttribute('data-value');
+      console.log("Note donnée :", note);
+      notation.setAttribute('data-notation', note);
+    
+    });
+  });
+});
+
+
+

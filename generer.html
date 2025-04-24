@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  
+
     <link rel="stylesheet" href="/CSS/styles-s.css">
     <link rel="stylesheet" href="/CSS/dark-mode.css">
     <link rel="stylesheet" href="/CSS/responsive-s.css">
@@ -12,12 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
-    <title>Recette</title>
+    <title>Recette aléatoire</title>
 </head>
 <body>
-  
-<!-- Logo, titre et barre de navigation  -->
+
+    <!-- Logo, titre et barre de navigation  -->
 <header>
 
     <div class="logoContainer">
@@ -46,24 +46,30 @@
     <!-- <div>
         <p class="dark dark-mode">🌙</p>
     </div> -->
-    
+
 </header>
+<main>
+
+    <button class="viewRecipe" id="randomButton">Générer une nouvelle recette</button>
+
+    <div class="containerRandomRecipe">
+        <h2 class="titleR"></h2>
+        <img src="" alt="" class="randomI">
+
+        <p class="categoryR"></p>
+        <p class="areaR"></p>
+    </div>
+
+    <div class="containerIngredientsR"></div>
+
+    <p class="instructionsR"></p>
 
 
 
-
-
-
-
-
-
-
-
-    </section>
-    
-
+</main>
 
 
     <script src="/JS/scripts.js"></script>
+    <script src="/JS/generer.js"></script>
 </body>
 </html>
