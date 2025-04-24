@@ -1,11 +1,13 @@
 //! like //
-const heartss = document.querySelectorAll(".heart");
-heartss.forEach((hearts) => {
-  hearts.addEventListener("click", () => {
-    hearts.classList.toggle("active");
-    hearts.textContent = hearts.classList.contains("active") ? "❤️" : "🤍";
+const hearts = document.querySelectorAll(".heart");
+hearts.forEach((heart) => {
+  heart.addEventListener("click", () => {
+    heart.classList.toggle("active");
+    heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
+    let recetteA = document.querySelector(".recetteA")
+    localStorage.setItem('recetteFav', recetteA.dataset.id);
     
-    
+    addFavoris()
 
 
 })});
@@ -13,37 +15,48 @@ heartss.forEach((hearts) => {
 
 
 
-const bouton = document.querySelector('#button');
-bouton.addEventListener('click', function() {
-    console.log('Bouton cliqué sur Page A');
+// hearts.addEventListener('click', function() {
     // Stocke une information simple
 
-    let recetteA = document.querySelector(".recetteA")
-    localStorage.setItem('recetteFav', recetteA);
+    
     // Optionnel: stocker une valeur plus complexe (ex: timestamp)
     // localStorage.setItem('derniereActionPageA', Date.now());
-    alert('Action enregistrée pour la page B !');
 
-    addFavoris()
-
-}) 
+    // addFavoris()
+    // Utiliser les DATA-ID, Les recettes présentes sur la page FAVORIS avec un Display NONE. si on rajouter aux favoris depuis la page Accueil, je stock le Data Id dans le localstorage et j'affiche la recette avec ID correspondant ! 
+// }) 
 
   function addFavoris() {
+
+    let value = localStorage.getItem('recetteFav')
+
+    console.log(value)
+
+    let recetteC = document.querySelector(".recetteCC")
+
+    console.log(recetteC.dataset.id)
+
+    if( recetteC.dataset.id = value){
+      recetteC.style.display = "block"
+    }
+
+
+
+
   // create a new div element
-  const recetteF = document.createElement("div"); // pas besoi pour l'instant.
-  let value = localStorage.getItem('recetteFav')
+  // const recetteF = document.createElement("div"); 
+  // pas besoi pour l'instant.
+  // let value = localStorage.getItem('recetteFav')
 
   console.log(value)
 
-  let img = document.querySelector("img")
-  let recette = document.querySelector(".favoris")
+  // let img = document.querySelector("img")
+  // let recette = document.querySelector(".favoris")
   // and give it some content
-  const newRecette = document.createTextNode("Hi there and greetings!");
 
   // add the text node to the newly created div
-  const favoris = document.querySelector(".favoris")
+  // const favoris = document.querySelector(".favoris")
 
-  recette.appendChild(img);
 
   };
 
