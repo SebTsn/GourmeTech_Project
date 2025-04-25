@@ -8,6 +8,19 @@ if(value){
     if (!data.includes(elementTab)){
 
     data.push(elementTab)
+
+
+    // GArder le coeur rouge si déjà en favoris : 
+    const hearts = document.querySelectorAll(".heart");
+    hearts.forEach(function(heart) {
+
+      if(value.includes(heart))
+        heart.textContent =  "❤️"
+      })
+
+
+
+    
     }
   })
   console.log(data)
@@ -28,14 +41,12 @@ hearts.forEach((heart) => {
     recettes.forEach((recette) =>{
       recette.addEventListener("click", () => {
         if (!data.includes(recette.dataset.id)){
-        // let data = [recette.dataset.id]
         data.push(recette.dataset.id)
 
         localStorage.setItem('recetteFav', data);
 
         console.log(data)
         }
-        // console.log(val)
 
 
     })})
@@ -44,26 +55,26 @@ hearts.forEach((heart) => {
 
 })});
 
-function addFavoris() {
+// function addFavoris() {
 
-   value = localStorage.getItem('recetteFav')
+//    value = localStorage.getItem('recetteFav')
 
-  console.log(value)
+//   console.log(value)
 
-  let recetteZZ = document.querySelectorAll(".recetteZZ")
-  console.log(recetteZZ)
-  console.log(recetteZZ.dataset.id)
+//   let recetteZZ = document.querySelectorAll(".recetteZZ")
+//   console.log(recetteZZ)
+//   console.log(recetteZZ.dataset.id)
 
 
- if( recetteZZ.dataset.id == value){
-      recetteZZ.style.display = "block"
- }
+//  if( recetteZZ.dataset.id == value){
+//       recetteZZ.style.display = "block"
+//  }
   
 
-console.log(value)
+// console.log(value)
 
 
-};
+// };
 // Envoyer un tableau. 
 
 
