@@ -33,6 +33,8 @@ document.querySelector("#randomButton").addEventListener("click", () => {
         const instructionsR = document.querySelector(".instructionsR")
         instructionsR.textContent = recipe.strInstructions.split("\n").join(".\n\n")
         instructionsR.style.whiteSpace = "pre-line"
+
+        document.querySelector(".hiddenR").style.display = "block"
     })
 })
 

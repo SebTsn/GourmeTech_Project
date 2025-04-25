@@ -224,7 +224,6 @@ input[type=checkbox]{
     color: gray;
 }
 .star:hover{
-    color: var(--primary-color);
     cursor: pointer;
 }
 .star.selected{
@@ -430,6 +429,9 @@ input, textarea{
     display: flex;
     margin-top: 50px;
 }
+.hiddenR{
+    display: none;
+}
 .containerRandomRecipe{
     margin-top: 50px;
 }
@@ -440,6 +442,12 @@ input, textarea{
     margin-bottom: 20px;
     font-family: var(--secondary-font);
     text-align: center;
+}
+.backImgR{
+    background-color: var(--primary-color);
+    height: 200px;
+    width: 100%;
+    margin-bottom: 160px;
 }
 .randomI{
     height: 350px;
@@ -455,22 +463,44 @@ input, textarea{
     grid-template-columns: repeat(3, 12rem);
     gap: 10px;
     margin: 40px;
+    border-top: var(--primary-color) 2px solid;
+    padding-top: 40px;
+    width: 90%;
+    margin: 40px auto;
 }
 .categoryR{
     text-align: center; 
     font-weight: bold;  
     margin-top: 30px;
     font-size: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    width: max-content;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px auto;
 }
 .areaR{
-    text-align: center; 
+    display: block;
+    margin: 0 auto;
     font-weight: bold;  
     margin-top: 10px;
     font-size: 1.2rem;
+    padding-bottom: 20px;
+    width: max-content ;
+    text-align: center;
+    background-color: rgb(21, 126, 112);
+    color: var(--background-color);
+    padding: 10px;
+    border-radius: 15px;
 }
 .instructionsR{
     width: 80%;
     margin: 0 auto;
     height: max-content;
     margin-bottom: 50px;
+    border-bottom: var(--primary-color) 2px solid;
+    padding-bottom: 20px;
+    border-top: var(--primary-color) 2px solid;
+    padding-top: 20px;
 }

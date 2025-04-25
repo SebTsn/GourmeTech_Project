@@ -55,11 +55,13 @@ const menuBtn = document.querySelector("#btn");
 const liens = document.querySelector("#menu");
 menuBtn.addEventListener('click', function() {
     liens.classList.toggle('show');
-      const menuBtnClose = document.querySelector(".close");
+      
+});
+const menuBtnClose = document.querySelector(".close");
       menuBtnClose.addEventListener('click', function() {
         liens.classList.toggle('show');
+        console.log("close")
     })
-});
 
 
 //! FAQ Accordéon //
@@ -169,9 +171,9 @@ document.querySelector('#searchButton').addEventListener('click', () => {
   
       const minutes = parseInt(duration);
       let time = '';
-      if (minutes < 15) time = '-15';
-      else if (minutes <= 30) time = '15-30';
-      else time = '+30';
+      if (minutes < 31) time = '-31';
+      else if (minutes <= 60) time = '30-60';
+      else time = '+60';
   
       const verifTime = selectedTimes.length ? selectedTimes.includes(time) : true;
       const verifDifficulty = selectedDifficulties.length ? selectedDifficulties.includes(difficulty) : true;
@@ -199,35 +201,83 @@ document.querySelector('#searchButton').addEventListener('click', () => {
 
 //! Ranking //
 
-// let recipeStar = localStorage.getItem("recipeStar");
+let A = document.querySelectorAll(".star")
 
-document.querySelectorAll('.notation').forEach(notation => {
+A.forEach((star) => {
+  star.addEventListener("mouseover", function () {
+    console.log(star)
+
+    this.style.color = "var(--primary-color)";
+
+    let previousStar = this.previousElementSibling;
+    while (previousStar) {
+      previousStar.style.color = "var(--primary-color)";
+      previousStar = previousStar.previousElementSibling;
+  }
+
+    let nextStar = this.nextElementSibling;
+    while (nextStar) {
+      nextStar.style.color = "gray";
+      nextStar = nextStar.nextElementSibling;
+    }
+  }
+)})
+
+A.forEach((star) => {
+  star.addEventListener("mouseout", function () {
+    resetStars()
+  }
+)})
+
+document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
   const stars = notation.querySelectorAll('.star');
+  const storageKey = `notation-${notationIndex}`;
+
+  // Recharger la note sauvegardée
+
+  const savedNote = parseInt(localStorage.getItem(storageKey));
+  if (!isNaN(savedNote)) {
+    for (let i = 0; i < savedNote; i++) {
+      stars[i].classList.add('selected');
+    }
+    notation.setAttribute('data-notation', savedNote);
+  }
 
   stars.forEach((star, index) => {
     star.addEventListener('click', () => {
-      //!  Supprime les classes "selected" de toutes les étoiles
       stars.forEach(s => s.classList.remove('selected'));
 
-      //!  Ajoute "selected" jusqu’à l’étoile cliquée
+      //  Ajouter les étoiles sélectionnées
+
       for (let i = 0; i <= index; i++) {
         stars[i].classList.add('selected');
       }
-      // //!  Enregistre la note dans le localStorage
-      // localStorage.setItem("recipeStar", recipeStar);
-      // //!  Enregistre la note dans le localStorage
-      // localStorage.setItem("notation", notation.getAttribute('data-notation'));
-      // //!  Enregistre la note dans le localStorage
-      // localStorage.setItem("note", star.getAttribute('data-value'));
 
-      //!  Facultatif : stocker la note dans un attribut ou log
-      const note = star.getAttribute('data-value');
-      console.log("Note donnée :", note);
+      // Récupérer la note 
+      const note = index + 1;
+
+      // Sauvegarder la note
+
+      localStorage.setItem(storageKey, note);
       notation.setAttribute('data-notation', note);
-    
+      console.log("Note donnée :", note);
     });
   });
 });
 
+// A.forEach((star) => {
+//   star.addEventListener("mouseout", function () {
+//     resetStars()
+//   }
+// )})
 
+
+// function resetStars(savedNote=0) {
+//   for(star of A) {
+//     if(star.dataset.value > savedNote){
+//       star.style.color = "gray";
+//   }else{
+//     star.style.color = "var(--primary-color)";
+//   }
+// }}
 
