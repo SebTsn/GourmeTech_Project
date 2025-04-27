@@ -174,8 +174,8 @@
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.555);
         backdrop-filter: blur(8px);
-        height: 100vh;
-        position: absolute;
+        height: 100%;
+        position: fixed;
         top: 0;
         left: 0;
         display: flex;
@@ -373,8 +373,8 @@
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.555);
         backdrop-filter: blur(8px);
-        height: 100vh;
-        position: absolute;
+        height: 100%;
+        position: fixed;
         top: 0;
         left: 0;
         display: flex;

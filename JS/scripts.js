@@ -223,11 +223,11 @@ A.forEach((star) => {
   }
 )})
 
-A.forEach((star) => {
-  star.addEventListener("mouseout", function () {
-    resetStars()
-  }
-)})
+// A.forEach((star) => {
+//   star.addEventListener("mouseout", function () {
+//     resetStars()
+//   }
+// )})
 
 document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
   const stars = notation.querySelectorAll('.star');
