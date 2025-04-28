@@ -1,127 +1,85 @@
+let value = localStorage.getItem('recetteFav')
+let favNone = document.querySelector(".favorisNone")
+
+console.log(favNone)
+
+//Supprimer la phrase : 
+
+if(value){
+
+    favNone.style.display = "none";
+
+
+}
+
+if(!value){
+    let favDisplay = document.querySelector(".favoris")
+    favDisplay.style.display = "none"
+}
 
 
 function addFavoris() {
 
     
-  
     let recetteZZ = document.querySelectorAll(".recetteF")
-    let value = localStorage.getItem('recetteFav')
+
     console.log(value)
+    if (value){
 
-    let k = value.split(",")
+        let k = value.split(",")
 
-    recetteZZ.forEach(function(elementRecette){
-        k.forEach(function(el){
-            if (el == elementRecette.dataset.id){
+        console.log(k)
 
-                elementRecette.style.display = "block"
-            }
-        })
+        recetteZZ.forEach(function(elementRecette){
+            k.forEach(function(el){
+                if (el == elementRecette.dataset.id){
+
+                    elementRecette.style.display = "flex"
+
+                }
+            })
 
 
         
-    })
+         })
 
-  
+    }
   
   };
   
-  addFavoris()
+    addFavoris()
 
 
-  let recetteZZ = document.querySelectorAll(".recetteF")
+    let recetteZZ = document.querySelectorAll(".recetteF")
+    let hearts = document.querySelectorAll(".heartDis")
 
-  let hearts = document.querySelectorAll(".heartDis")
-  hearts.forEach(function(heart){
+    hearts.forEach(function(heart){
 
-          heart.addEventListener("click", function (event) {
-            const datasetKey = event.target.dataset.id;
+        heart.addEventListener("click", function (event) {
+
+            let target = event.target.parentElement
+            console.log(target)
+            let targetZ = target.dataset.id
+            console.log(targetZ)
+
+            // Supprimer le DATASET  : 
+
+            let data = localStorage.getItem('recetteFav').split(",")
 
 
-            let value = localStorage.getItem('recetteFav')
+            console.log(data)
 
-            console.log(datasetKey)
+            let index = data.indexOf(targetZ);
+            console.log(index);
+
+            data.splice(index, 1)
+
+
+            console.log(data)
+
+            localStorage.setItem('recetteFav', data);
+            })
+        })    
+    
 
         
-            console.log(value)
-
-            localStorage.removeItem('recetteFav', datasetKey);
-
-
-
-
-
-
-            // recetteZZ.addEventListener("click", function(event) {
-                // Vérifier si l'élément cliqué a la classe "item"
-                // if (event.target.classList.contains("recetteF")) {
-                    // Récupérer la valeur de l'attribut data-key
-                    // const datasetKey = event.target.dataset.id;
-            
-                    // Supprimer la valeur correspondante du localStorage
-                    // if (datasetKey) {
-                    //     localStorage.removeItem(datasetKey);
-                    // }}})
-
-                })})
-            // Récupérer le tableau depuis le localStorage
-        
-
-            // recetteZZ.style.display = "none"
-            // let k = localStorage.getItem('recetteFav').split(",")
-        
-            // // Vérifier si le tableau existe
-            // if (k) {
-            //     // Supprimer la valeur du tableau
-            //     k = k.filter(item => item !== valeur);
-        
-            //     // Mettre à jour le tableau dans le localStorage
-            //     localStorage.setItem("recetteFav", k);
-        //     })
-        // })
-        //         let value = localStorage.getItem('recetteFav')
-        //         console.log(value)
-        //         let k = value.split(",")
-        //         console.log(k)
-
-
-        //         k.forEach(function(el){
-        //             localStorage.removeItem('recetteFav');
-        //             console.log(el)
-                
-        //         })
-
-        //   })
-//   )})
-
-
-
-
-
-                // recetteZZ.forEach(function(elementRecette){
-                //     k.forEach(function(el){
-                //         if (el == elementRecette.dataset.id){
-                            
-                //             localStorage.removeItem(elementRecette.data[i]);
-
-                            // elementRecette.style.display = "block"
-                //         }
-                //     })
-                // })})
-
-        //   recetteZZ.forEach(function(recette){
-        //     recette.style.display = "none"
-
-        //   })  
-
-
-//           })  
-
-
-
-//   })
-
-
-  // Envoyer un tableau dans le localStorage.
-  // Pour séléctionner tous les élements DATAID
-  // Utiliser INCLUDES pour vérifier si la valeur est présente dans le tableau.
