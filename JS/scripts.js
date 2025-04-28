@@ -196,6 +196,53 @@ document.querySelector('#searchButton').addEventListener('click', () => {
 
 //! Validation Formulaire //
 
+// const form = document.querySelector('.formulaire');
+// console.log(form);
+
+// // On récupère la valeur du champ input name
+// const nameInput = document.getElementById('name');
+
+// // Lancement de la validation 
+// form.addEventListener('submit', function(event) {
+//     let errors = [];
+
+//     // Si le champ "name" est vide
+//     if (nameInput.value.trim() === '') {
+//         // On ajoute une erreur à la constante errors
+//         errors.push('Veuillez saisir votre nom.');
+//     }
+    
+//     // Gestions des erreurs
+//     if (errors.length > 0) {
+//         // Si il y a une erreur :
+//         // On empeche l'envoi du formulaire
+//         event.preventDefault();
+//         // On appelle la fonction pour afficher les erreurs
+//         displayErrors(errors);
+//     }
+
+// });
+
+    
+// // Fonction d'affichage des erreurs
+// function displayErrors(errors) {
+//     // On créé une balise div
+//     const errorContainer = document.createElement('div');
+//     // On lui ajoute la classe .error
+//     errorContainer.classList.add('error');
+
+//     // On fait une boucle pour afficher toutes les erreurs
+//     errors.forEach(function(error) {
+//         // On créé un élément paragraphe p
+//         // à chaque tour de boucle, donc pour chaque erreur
+//         const errorMessage = document.createElement('p');
+//         errorMessage.textContent = error;
+//         errorContainer.appendChild(errorMessage);
+//     });
+
+//     // On affiche les erreurs à la fin du formulaire 
+//     form.appendChild(errorContainer);
+// }
 
 
 
@@ -204,32 +251,20 @@ document.querySelector('#searchButton').addEventListener('click', () => {
 let A = document.querySelectorAll(".star")
 
 A.forEach((star) => {
-  star.addEventListener("mouseover", function () {
+  star.addEventListener("mouseenter", function () {
     console.log(star)
-
-    this.style.color = "var(--primary-color)";
-
-    let previousStar = this.previousElementSibling;
-    while (previousStar) {
-      previousStar.style.color = "var(--primary-color)";
-      previousStar = previousStar.previousElementSibling;
-  }
-
-    let nextStar = this.nextElementSibling;
-    while (nextStar) {
-      nextStar.style.color = "gray";
-      nextStar = nextStar.nextElementSibling;
-    }
-  }
-)})
-
-// A.forEach((star) => {
-//   star.addEventListener("mouseout", function () {
-//     resetStars()
-//   }
-// )})
+    star.classList.add("overStars")
+  })  
+})
 
 document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
+  notation.addEventListener("mouseleave", function () {
+    let C = notation.querySelectorAll('.star')
+    C.forEach((elementStar) => {
+      elementStar.classList.remove("overStars")
+    })
+  })
+
   const stars = notation.querySelectorAll('.star');
   const storageKey = `notation-${notationIndex}`;
 
@@ -242,7 +277,7 @@ document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
     }
     notation.setAttribute('data-notation', savedNote);
   }
-
+  
   stars.forEach((star, index) => {
     star.addEventListener('click', () => {
       stars.forEach(s => s.classList.remove('selected'));
@@ -265,19 +300,5 @@ document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
   });
 });
 
-// A.forEach((star) => {
-//   star.addEventListener("mouseout", function () {
-//     resetStars()
-//   }
-// )})
 
-
-// function resetStars(savedNote=0) {
-//   for(star of A) {
-//     if(star.dataset.value > savedNote){
-//       star.style.color = "gray";
-//   }else{
-//     star.style.color = "var(--primary-color)";
-//   }
-// }}
 

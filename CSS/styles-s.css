@@ -14,6 +14,8 @@
     --primary-font: "Special Gothic Expanded One", sans-serif;
     --secondary-font: "Exo 2", sans-serif;
     --third-font: "Open Sans", sans-serif;
+
+
 }
 body{
     font-family: var(--third-font);
@@ -125,7 +127,7 @@ nav .navList li a:hover{
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: bold;
-    width: 83vw;
+    width: 80%;
 }
 #searchButton{
     background-color: var(--primary-color);
@@ -136,7 +138,13 @@ nav .navList li a:hover{
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
-    width: 10vw;
+    height: max-content;
+    width: max-content;
+}
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .ContainerCategorySearch{
     display: flex;
@@ -227,7 +235,10 @@ input[type=checkbox]{
     cursor: pointer;
 }
 .star.selected{
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
+}
+.overStars{
+    color: var(--primary-color) !important;
 }
 .detailsRecipe{
     display: flex;
@@ -321,8 +332,10 @@ input[type=checkbox]{
     padding: 20px;
 }
 .infos-content p{
-    width: 80%;
+    width: 70%;
     font-size: large;
+    text-align: center;
+    
 }
 .contact{
     width: 25vw;
@@ -360,7 +373,11 @@ input, textarea{
     font-weight: bold;
     width: 30%;
 }
-
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
 /* ---------------------------------------- */
 /* ------------------FAQ------------------- */
 /* ---------------------------------------- */
