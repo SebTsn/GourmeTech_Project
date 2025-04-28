@@ -18,7 +18,7 @@ if(!value){
 }
 
 
-function addFavoris() {
+function addFav() {
 
     
     let recetteZZ = document.querySelectorAll(".recetteF")
@@ -44,12 +44,11 @@ function addFavoris() {
          })
 
     }
+
   
   };
   
-    addFavoris()
-
-
+function suppFav(){
     let recetteZZ = document.querySelectorAll(".recetteF")
     let hearts = document.querySelectorAll(".heartDis")
 
@@ -65,21 +64,26 @@ function addFavoris() {
             // Supprimer le DATASET  : 
 
             let data = localStorage.getItem('recetteFav').split(",")
-
-
             console.log(data)
 
             let index = data.indexOf(targetZ);
             console.log(index);
 
             data.splice(index, 1)
-
-
             console.log(data)
 
             localStorage.setItem('recetteFav', data);
+
+            if (target) {
+                target.remove(); 
+            }
+
+           
             })
         })    
     
 
-        
+    }        
+
+    addFav()
+    suppFav()
