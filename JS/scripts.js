@@ -90,3 +90,22 @@ recetteQ.forEach(function(el){
 
 
 
+// Page RECETTE - ajouter FAV : 
+
+
+let btn = document.querySelector(".heart")
+
+btn.addEventListener("click", function(){
+
+let y = btn.dataset.id
+console.log(y)
+if(value){
+  if (!data.includes(y)){
+
+   data.push(y)
+   localStorage.setItem('recetteFav', data);
+  }
+}  
+
+})
+

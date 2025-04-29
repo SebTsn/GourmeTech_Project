@@ -11,11 +11,6 @@
       --fourth-color: #3996DB;
   }
 
-  /* body{
-    height: 51515vh;
-
-  } */
-
 
 /* ---------------------------------------- */
 /* -----------------Footer----------------- */
@@ -266,6 +261,7 @@ ol, ul{
 .suggP{
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 50px;
     border-top: solid 1px grey;
     font-size: large;
     
