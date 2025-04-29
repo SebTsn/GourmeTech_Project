@@ -9,6 +9,7 @@
     --secondary-color:#F5F5F5; 
     --background-color: #FFFFFF; 
     --third-color: #2EC869; 
+<<<<<<< HEAD
     --fourth-color: #3996DB; 
 
     --primary-font: "Special Gothic Expanded One", sans-serif;
@@ -19,6 +20,9 @@
 }
 body{
     font-family: var(--third-font);
+=======
+    --fourth-color: #3996DB;
+>>>>>>> ZzOuch_branch
 }
 /* ---------------------------------------- */
 /* -----------------HEADER----------------- */

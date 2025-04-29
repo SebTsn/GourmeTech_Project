@@ -16,6 +16,7 @@
 let theme = localStorage.getItem("theme");
 const darkModeButton = document.querySelector('.dark-mode');
 
+<<<<<<< HEAD
 
 if (theme === "dark") {
     document.body.classList.add("dark-mode");
@@ -34,17 +35,56 @@ darkModeButton.addEventListener("click", function() {
         darkModeButton.textContent = "🌙";  
     }
 });
+=======
+darkModeButton.addEventListener('click', darkMode);
+>>>>>>> ZzOuch_branch
 
 
 
 //! like //
+<<<<<<< HEAD
 
 const hearts = document.querySelectorAll(".heart");
 
+=======
+// const hearts = document.querySelectorAll(".heart");
+// hearts.forEach((heart) => {
+//   heart.addEventListener("click", () => {
+//     heart.classList.toggle("active");
+//     heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
+//   });
+// });
+
+
+// Génération du localStorage pour les FAVORIS :
+
+
+let value = localStorage.getItem('recetteFav')
+let data = []  ;
+
+console.log(value)
+if(value){
+  let b = value.split(",") 
+  b.forEach(function (elementTab){
+    if (!data.includes(elementTab)){
+
+    data.push(elementTab)
+
+    }
+  })
+  console.log(data)
+}
+
+
+//<------------Possibilité de passer le coeur en rouge :
+
+const hearts = document.querySelectorAll(".heart");
+>>>>>>> ZzOuch_branch
 hearts.forEach((heart) => {
   heart.addEventListener("click", () => {
     heart.classList.toggle("active");
     heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
+<<<<<<< HEAD
   });
 });
 
@@ -285,3 +325,64 @@ function swapImages(event) {
 imagesInContainer2.forEach(img => {
     img.addEventListener('click', swapImages);
 });
+=======
+
+     
+    // Enregistrement des recettes favorites :
+    
+    let recettes = document.querySelectorAll(".recetteA")
+
+    recettes.forEach((recette) =>{
+      recette.addEventListener("click", () => {
+        if (!data.includes(recette.dataset.id)){
+        data.push(recette.dataset.id)
+
+        localStorage.setItem('recetteFav', data);
+
+        console.log(data)
+  
+    }})})
+
+})});
+
+// Garder le coeur rouge si déjà en favoris :
+
+let recetteQ = document.querySelectorAll(".recetteA")
+recetteQ.forEach(function(el){
+
+ let f = el.dataset.id
+  console.log(f)
+  console.log(data)
+
+  if(data.includes(f)){
+
+  console.log(el.querySelector(".heart")) // Pour récupérer le coeur
+
+  el.querySelector(".heart").textContent = "❤️" 
+
+  }
+
+})
+
+
+
+// Page RECETTE - ajouter FAV : 
+
+
+let btn = document.querySelector(".heart")
+
+btn.addEventListener("click", function(){
+
+let y = btn.dataset.id
+console.log(y)
+if(value){
+  if (!data.includes(y)){
+
+   data.push(y)
+   localStorage.setItem('recetteFav', data);
+  }
+}  
+
+})
+
+>>>>>>> ZzOuch_branch
