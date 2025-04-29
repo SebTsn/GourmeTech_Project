@@ -1,0 +1,426 @@
+/* ---------------------------------------- */
+/* -------------Version Mobile------------- */
+/* ---------------------------------------- */
+
+@media(320px <= width <= 767px){
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    header{
+        width: 100%;
+        margin-right: 20px;
+        border: 0;
+        margin: 0;
+    }
+    .logoContainer{
+        position: relative;
+    }
+    .appTitle{
+        width: auto;
+    }
+    .navList{
+        display: none;
+        align-items: center;
+    }
+    .navList.show{
+        /* display: block; */
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        z-index: 1000;
+    }
+    .navList.show li a{
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+    .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        /* color: var(--background-color); */
+        border-style: none;
+        /* border-color: var(--primary-color); */
+        border-radius: 5px;
+        /* position: absolute;  */
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    } 
+    .dark{
+        display: none;
+    }
+    .dark1{
+        display: block;
+        margin-top: 50px;
+    }
+    .close{
+        display: block;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+        border-style: solid;
+        border-color: var(--primary-color);
+        border-radius: 100px;
+        padding: 2px 10px;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+    .item{
+        max-height: 50px;
+    }
+   
+    /* -------------Search Section------------- */
+
+    .searchBar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search{
+        height: max-content;
+    }
+    #searchInput{
+        width: 100%;
+    }
+    #searchButton{
+        width: 35%;
+        font-size: 0.8rem;
+    }
+    .no-result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    /* -------------Recipe Section------------- */
+
+    .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .recetteA, .recetteB, .recetteC{
+        width: 80%;
+        margin-bottom: 25px;
+
+    }
+ 
+    /* -------------Infos Section------------- */
+
+    .container_info_contact{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 800px;
+    }
+    .infos{
+        width: 90%;
+        height: 800px;
+    }
+    .infos-content p{
+        font-size: 1rem;
+        padding: 10px;
+        text-align: center;
+    }
+    .contact{
+        width: 90%;
+    }
+    .faq{
+        width: 90%;
+    }
+
+    /* -------------Page Générer--------------- */
+
+    .containerIngredientsR{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #generatePdf{
+        width: max-content;
+    }
+
+    /* ------------Dark-Mode Mobile------------ */
+    /* ---------------------------------------- */
+
+    body.dark-mode header{
+        width: 100%;
+        margin-right: 20px;
+        border: 0;
+        margin: 0;
+    }
+    body.dark-mode .navList{
+        display: none;
+        align-items: center;
+    }
+    body.dark-mode .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    body.dark-mode .navList.show li a{
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+    body.dark-mode .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        /* color: var(--background-color); */
+        border-style: none;
+        /* border-color: var(--primary-color); */
+        border-radius: 5px;
+        /* position: absolute;  */
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    } 
+    body.dark-mode .dark{
+        display: none;
+    }
+    body.dark-mode .dark1{
+        display: block;
+    }
+
+    /* -------------Search Section------------- */
+
+    body.dark-mode .search{
+        height: max-content;
+    }
+
+     /* -------------Recipe Section------------- */
+
+     body.dark-mode .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body.dark-mode .recetteA, body.dark-mode .recetteB, body.dark-mode .recetteC{
+        width: 80%;
+        margin-bottom: 25px;
+
+    }
+}
+
+  
+/* ---------------------------------------- */
+/* ------------Version Tablette------------ */
+/* ---------------------------------------- */
+
+@media(768px <= width <= 1023px){
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    .logoContainer{
+        position: relative;
+    }
+    .navList{
+        display: none;
+    }
+    .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    .navList.show li a{
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+    .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 5px;
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    } 
+    .close{
+        display: block;
+        font-size: 3rem;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+        border-style: solid;
+        border-color: var(--primary-color);
+        border-radius: 100px;
+        padding: 2px 10px;
+        cursor: pointer;
+    }
+    .dark1{
+        font-size: 2.5rem;
+    }
+
+     /* -------------Search Section------------- */
+
+     .searchBar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search{
+        height: max-content;
+    }
+    #searchInput{
+        width: 100%;
+    }
+    #searchButton{
+        width: 35%;
+        font-size: 1.5rem;
+    }
+    .no-result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        display: none;
+    }
+
+    /* -------------Recipe Section------------- */
+    
+    .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .recetteA, .recetteB, .recetteC{
+        width: 45%;
+        margin-bottom: 25px;
+    }
+
+    /* -------------Infos Section------------- */
+
+    .container_info_contact{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 800px;
+    }
+    .infos{
+        width: 82%;
+        height: 800px;
+    }
+    .infos-content p{
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+     }
+    .contact{
+        width: 70%;
+    }
+    .faq{
+        width: 70%;
+    }
+
+    /* -----------Dark-Mode Tablette----------- */
+    /* ---------------------------------------- */
+
+    body.dark-mode .navList{
+        display: none;
+    }
+    
+    body.dark-mode .navList.show{
+        display: block;
+        font-size: 5em;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        backdrop-filter: blur(8px);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    body.dark-mode .navList.show li a{
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+    body.dark-mode .toggleB{
+        display: block;
+        margin-bottom: 20px;
+        width: 60px;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 5px;
+        right: 6rem;
+        top: 1rem; 
+        margin-left: 10px;
+        background-image: url(../assets/menu-deroulant.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+
+    /* -------------Search Section------------- */
+
+    body.dark-mode .search{
+        height: max-content;
+    }
+
+     /* -------------Recipe Section------------- */
+
+     body.dark-mode .recettesContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body.dark-mode .recetteA, body.dark-mode .recetteB, body.dark-mode .recetteC{
+        width: 45%;
+        margin-bottom: 25px;
+    }
+
+}
