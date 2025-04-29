@@ -132,6 +132,7 @@ function btnFAQsAnimation(e) {
 
 //** Barre de recherche 2**/
 
+if(document.querySelector('#searchButton') !== null) {
 
 document.querySelector('#searchButton').addEventListener('click', () => {
     const searchText = document.querySelector('#searchInput').value.toLowerCase();
@@ -192,59 +193,8 @@ document.querySelector('#searchButton').addEventListener('click', () => {
     
     noResult.style.display = result === 0 ? 'block' : 'none';
   });
-
-
-//! Validation Formulaire //
-
-// const form = document.querySelector('.formulaire');
-// console.log(form);
-
-// // On récupère la valeur du champ input name
-// const nameInput = document.getElementById('name');
-
-// // Lancement de la validation 
-// form.addEventListener('submit', function(event) {
-//     let errors = [];
-
-//     // Si le champ "name" est vide
-//     if (nameInput.value.trim() === '') {
-//         // On ajoute une erreur à la constante errors
-//         errors.push('Veuillez saisir votre nom.');
-//     }
-    
-//     // Gestions des erreurs
-//     if (errors.length > 0) {
-//         // Si il y a une erreur :
-//         // On empeche l'envoi du formulaire
-//         event.preventDefault();
-//         // On appelle la fonction pour afficher les erreurs
-//         displayErrors(errors);
-//     }
-
-// });
-
-    
-// // Fonction d'affichage des erreurs
-// function displayErrors(errors) {
-//     // On créé une balise div
-//     const errorContainer = document.createElement('div');
-//     // On lui ajoute la classe .error
-//     errorContainer.classList.add('error');
-
-//     // On fait une boucle pour afficher toutes les erreurs
-//     errors.forEach(function(error) {
-//         // On créé un élément paragraphe p
-//         // à chaque tour de boucle, donc pour chaque erreur
-//         const errorMessage = document.createElement('p');
-//         errorMessage.textContent = error;
-//         errorContainer.appendChild(errorMessage);
-//     });
-
-//     // On affiche les erreurs à la fin du formulaire 
-//     form.appendChild(errorContainer);
-// }
-
-
+  
+}
 
 //! Ranking //
 
@@ -301,4 +251,37 @@ document.querySelectorAll('.notation').forEach((notation, notationIndex) => {
 });
 
 
+//! Galerie d'images //
 
+// Sélectionner toutes les images dans .imgcontainer2
+const imagesInContainer2 = document.querySelectorAll('.bigContainer img');
+console.log(imagesInContainer2);
+
+// Fonction pour déplacer l'image
+function swapImages(event) {
+    const clickedImage = event.target; // L'image cliquée
+    const imgContainer = clickedImage.closest('.bigContainer').querySelector('.imgcontainer'); // Trouver le conteneur .imgcontainer
+    const imgContainer2 = clickedImage.closest('.bigContainer').querySelector('.imgcontainer2'); // Trouver le conteneur .imgcontainer2
+
+    // Trouver l'image actuelle dans .imgcontainer (celle avec la classe "recipePix")
+    let currentMainImage = imgContainer.querySelector('.recipePix');
+
+    // Déplacer l'image cliquée dans .imgcontainer (à la place de l'image actuelle)
+    imgContainer.appendChild(clickedImage);
+
+    // Déplacer l'image actuelle (celle avec la classe "recipePix") dans .imgcontainer2
+    imgContainer2.appendChild(currentMainImage);
+
+    // Assurez-vous que l'image déplacée ait la classe "recipePix"
+    clickedImage.classList.remove('gallery');
+    clickedImage.classList.add('recipePix');
+
+    // Assurez-vous que l'image déplacée (anciennement "recipePix") ait la classe "gallery"
+    currentMainImage.classList.remove('recipePix');
+    currentMainImage.classList.add('gallery');
+}
+
+// Ajouter un événement de clic à chaque image de .imgcontainer2
+imagesInContainer2.forEach(img => {
+    img.addEventListener('click', swapImages);
+});
