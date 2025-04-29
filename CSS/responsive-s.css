@@ -153,6 +153,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    #generatePdf{
+        width: max-content;
+    }
 
     /* ------------Dark-Mode Mobile------------ */
     /* ---------------------------------------- */
