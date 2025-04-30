@@ -3,40 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-propos</title>
 
+    <link rel="stylesheet" href="/CSS/styles-s.css">
+    <link rel="stylesheet" href="/CSS/dark-mode.css">
+    <link rel="stylesheet" href="/CSS/responsive-s.css">
     <link rel="stylesheet" href="CSS/styles-z.css">
-    <link rel="stylesheet" href="CSS/styles-s.css">
-    <link rel="stylesheet" href="CSS/dark-mode.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+    <title>A-propos</title>
 </head>
 <body>
-    <!-- Logo, titre et barre de navigation  -->
-    <header>
-        <div class="logoContainer">
-            <span class="logoG">G</span>
-            <h1 class="appTitle">GourmeTech</h1>
+
+<!-- Logo, titre et barre de navigation  -->
+<header>
+
+    <div class="logoContainer">
+        <span class="logoG">G</span>
+        <h1 class="appTitle">GourmeTech</h1>
+    </div>
+
+    <nav>
+
+        <button class="toggleB" id="btn"></button>
+
+        <ul id="menu" class="navList">
+            
+            <li class="item"><a href="" class="close">✖</a></li>
+            <li class="item"><a href="index.html">Accueil</a></li>
+            <li class="item"><a href="">Ajouter une recette</a></li>
+            <li class="item"><a href="generer.html">Recette aléatoire</a></li>
+            <li class="item"><a href="favoris.html">Mes favoris</a></li>
+            <li class="item"><a href="a-propos.html">À propos</a></li>
+            <li class="item"><p class="dark1 dark-mode">🌙</p></li>
+            
+        </ul>
+    </nav>  
+</header>
+
+<main>
+
+<!-- Section informations de la page à-propos  -->
+    <div class="container_info_contact">
+
+        <div class="infos">
+            <h2 class="titleAP" id="titleAPG">À propos de GourmeTech</h2>
+            <div class="infos-content">
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique.</p>
+                <p>GourmeTech est une application dédiée aux passionnés de cuisine. Que vous soyez un chef expérimenté ou un novice en cuisine, notre plateforme vous permet de découvrir, partager et sauvegarder vos recettes préférées.</p>
+                <p>Notre mission est de rassembler les amateurs de gastronomie et de faciliter l'échange d'idées culinaires.</p>
+                <p>Nous croyons que la cuisine est un art qui mérite d'être partagé et célébré.</p>
+            </div>
         </div>
 
-        <nav>
-            <ul class="navList">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="recette.html">Ajouter une recette</a></li>
-                <li><a href="favoris.html">Mes favoris</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-            </ul>
-        </nav>
-<!-- Logo pour le passage en Dark-mode  -->
-        <div>
-            <p class="dark dark-mode">🌙</p>
+<!-- Section Contact de la page à-propos  -->
+        <div class="contact">
+            <h2 class="titleAP">Contact</h2>
+            <form id="myForm" class="formulaire" action="" method="">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="email" placeholder="exemple@email.com" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre message ici..."></textarea>
+
+                <button id="contactBtn" type="submit">Envoyer</button>
+            </form>
         </div>
-    </header>
+    </div>
     
+<!-- Section FAQ de la page à-propos  -->
+    <div class="faq">
 
+        <h2 class="titleAP" id="titleAPFaq">FAQ</h2>
 
+        <div class="faq-content">
 
+            <h3><button class="btnFAQ"><strong>Comment ajouter une recette ?</strong></button></h3>
+            <p class="contentFAQ">Pour ajouter une recette, allez dans la section "Ajouter une recette" et remplissez le formulaire avec les détails de votre plat.</p>
 
+            <h3><button class="btnFAQ"><strong>Comment sauvegarder mes recettes préférées ?</strong></button></h3>
+            <p class="contentFAQ">Vous pouvez sauvegarder vos recettes préférées en cliquant sur le bouton "Ajouter aux favoris" sur la page de chaque recette.</p>
 
-    <footer>
+            <h3><button class="btnFAQ"><strong>Comment contacter l'équipe de GourmeTech ?</strong></button></h3>
+            <p class="contentFAQ">Vous pouvez nous contacter via le formulaire de contact ci-dessus ou par email à exemple@email.com</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
 
 
         <div class="footer">
@@ -64,9 +124,13 @@
     
     
     
-        </footer>
+ </footer>
 
 
-    <script src="JS/scripts.js"></script>
+   
+
+    <script src="/JS/scripts.js"></script>
+    <script src="JS/apropos.js"></script>
+
 </body>
 </html>
