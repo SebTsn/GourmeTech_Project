@@ -1,4 +1,4 @@
-let value = localStorage.getItem('recetteFav')
+//let value = localStorage.getItem('recetteFav')
 let favNone = document.querySelector(".favorisNone")
 
 console.log(favNone)

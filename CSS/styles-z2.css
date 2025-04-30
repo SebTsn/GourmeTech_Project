@@ -118,7 +118,7 @@ footer .navFooter{
     
     }
     
-    #pageRecette ol, ul{
+    #pageRecette ol,#pageRecette ul{
         margin-left: 40px;
         margin-top: 10px;
         margin-bottom: 10px;

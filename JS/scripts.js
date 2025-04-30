@@ -1,4 +1,4 @@
-// ! Mode Dark //
+//! Mode Dark //
 
 let theme = localStorage.getItem("theme");
 const darkModeButton = document.querySelector('.dark-mode');
