@@ -9,13 +9,12 @@
     --secondary-color:#F5F5F5; 
     --background-color: #FFFFFF; 
     --third-color: #2EC869; 
+
     --fourth-color: #3996DB; 
 
     --primary-font: "Special Gothic Expanded One", sans-serif;
     --secondary-font: "Exo 2", sans-serif;
     --third-font: "Open Sans", sans-serif;
-
-
 }
 body{
     font-family: var(--third-font);

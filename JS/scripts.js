@@ -1,21 +1,7 @@
-// Dark Mode 
-
-// function darkMode() {
-//     let element = document.body;
-//     element.classList.toggle("dark-mode");
-//      // Change l’emoji selon le thème
-//      darkModeButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-//   }
- 
-// const darkModeButton = document.querySelector('.dark-mode');
-
-// darkModeButton.addEventListener('click', darkMode);
-
 // ! Mode Dark //
 
 let theme = localStorage.getItem("theme");
 const darkModeButton = document.querySelector('.dark-mode');
-
 
 if (theme === "dark") {
     document.body.classList.add("dark-mode");
@@ -37,16 +23,94 @@ darkModeButton.addEventListener("click", function() {
 
 
 
+
 //! like //
 
-const hearts = document.querySelectorAll(".heart");
+// Génération du localStorage pour les FAVORIS :
 
+
+let value = localStorage.getItem('recetteFav')
+let data = []  ;
+
+console.log(value)
+if(value){
+  let b = value.split(",") 
+  b.forEach(function (elementTab){
+    if (!data.includes(elementTab)){
+
+    data.push(elementTab)
+
+    }
+  })
+  console.log(data)
+}
+
+
+//<------------Possibilité de passer le coeur en rouge :
+
+const hearts = document.querySelectorAll(".heart");
 hearts.forEach((heart) => {
   heart.addEventListener("click", () => {
     heart.classList.toggle("active");
     heart.textContent = heart.classList.contains("active") ? "❤️" : "🤍";
-  });
-});
+
+     
+    // Enregistrement des recettes favorites :
+    
+    let recettes = document.querySelectorAll(".recetteA")
+
+    recettes.forEach((recette) =>{
+      recette.addEventListener("click", () => {
+        if (!data.includes(recette.dataset.id)){
+        data.push(recette.dataset.id)
+
+        localStorage.setItem('recetteFav', data);
+
+        console.log(data)
+  
+    }})})
+
+})});
+
+// Garder le coeur rouge si déjà en favoris :
+
+let recetteQ = document.querySelectorAll(".recetteA")
+recetteQ.forEach(function(el){
+
+ let f = el.dataset.id
+  console.log(f)
+  console.log(data)
+
+  if(data.includes(f)){
+
+  console.log(el.querySelector(".heart")) // Pour récupérer le coeur
+
+  el.querySelector(".heart").textContent = "❤️" 
+
+  }
+
+})
+
+
+
+// Page RECETTE - ajouter FAV : 
+
+
+let btn = document.querySelector(".heart")
+
+btn.addEventListener("click", function(){
+
+let y = btn.dataset.id
+console.log(y)
+if(value){
+  if (!data.includes(y)){
+
+   data.push(y)
+   localStorage.setItem('recetteFav', data);
+  }
+}  
+
+})
 
 
 //! NavBar Responsive //
@@ -66,25 +130,6 @@ const menuBtnClose = document.querySelector(".close");
 
 //! FAQ Accordéon //
 
-// const btnFAQs = [...document.querySelectorAll('.btnFAQ')]
-
-// btnFAQs.forEach(btnFAQ => btnFAQ.addEventListener("click", btnFAQsAnimation))
-
-// function btnFAQsAnimation(e){
-
-//     const contentFAQs = [...document.querySelectorAll(".contentFAQ")]
-
-//     const indexToRemove = btnFAQs.findIndex(btnFAQ => btnFAQ.classList.contains("active-tab"))
-
-//     btnFAQs[indexToRemove].classList.remove("active-tab");
-//     contentFAQs[indexToRemove].classList.remove("active-tab-content");
-
-//     const indexToShow = btnFAQs.indexOf(e.target)
-
-//     btnFAQs[indexToShow].classList.add("active-tab");
-//     contentFAQs[indexToShow].classList.add("active-tab-content");
-// }
-
 const btnFAQs = [...document.querySelectorAll('.btnFAQ')];
 
 btnFAQs.forEach(btnFAQ => btnFAQ.addEventListener("click", btnFAQsAnimation));
@@ -103,34 +148,9 @@ function btnFAQsAnimation(e) {
     contentFAQs[indexToShow].classList.add("active-tab-content");
 }
 
-// e.currentTarget
-// Ca fait toujours référence à l’élément sur lequel l’écouteur d’événement est attaché, donc ici le <button>, peu importe si tu cliques sur le <strong> à l’intérieur.
-// e.target ne correspond pas à un élément de btnFAQs
-// donc indexToShow vaut -1, ce qui cause des bugs ou aucun affichage.
-
 //! Section Recherche //
 
 //** Barre de recherche **/
-
-// const searchInput = document.querySelector("#searchInput");
-// const searchButton = document.querySelector("#searchButton");
-
-// searchButton.addEventListener("click", function() {
-//     const searchTerm = searchInput.value.toLowerCase();
-//     const cards = document.querySelectorAll(".card");
-
-//     cards.forEach(card => {
-//         const cardTitle = card.querySelector("h2").textContent.toLowerCase();
-//         if (cardTitle.includes(searchTerm)) {
-//             card.style.display = "block";
-//         } else {
-//             card.style.display = "none";
-//         }
-//     });
-// });
-
-
-//** Barre de recherche 2**/
 
 if(document.querySelector('#searchButton') !== null) {
 
@@ -285,3 +305,4 @@ function swapImages(event) {
 imagesInContainer2.forEach(img => {
     img.addEventListener('click', swapImages);
 });
+
