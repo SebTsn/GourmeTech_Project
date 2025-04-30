@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/CSS/styles-s.css">
     <link rel="stylesheet" href="/CSS/dark-mode.css">
     <link rel="stylesheet" href="/CSS/responsive-s.css">
-    <link rel="stylesheet" href="CSS/styles-z.css">
+    <link rel="stylesheet" href="CSS/styles-z2.css">
   
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <title>Accueil</title>
 
 </head>
-<body>
+<body id="pageAccueil">
     
 
 <!-- Logo, titre et barre de navigation  -->
@@ -46,12 +46,7 @@
             
         </ul>
     </nav>
-
-<!-- Logo pour le passage en Dark-mode  -->
-    <!-- <div>
-        <p class="dark dark-mode">🌙</p>
-    </div> -->
-
+    
 </header>
 
 <main>
@@ -127,7 +122,7 @@
 
     <section class="recettesContainer">
 
-        <div class="recetteA card">
+        <div class="recetteA card" data-id="rP1">
             <div class="bigContainer">
                 <div class="imgcontainer">
                     <span title="Ajouter aux favoris" class="heart">🤍</span>
@@ -153,11 +148,11 @@
                     <span class="time">60 min</span>
                     <span class="difficult">Facile</span>
                 </div>
-                <button class="viewRecipe">Voir la recette</button>
+                <button class="viewRecipe"><a target="_blank" href="/recette.html">Voir la recette</a></button>
             </div>
         </div>
 
-        <div class="recetteB card">
+        <div class="recetteA card" data-id="rP2">
             <div class="bigContainer">
                 <div class="imgcontainer">
                     <span title="Ajouter aux favoris" class="heart">🤍</span>
@@ -183,11 +178,11 @@
                     <span class="time">45 min</span>
                     <span class="difficult">Moyen</span>
                 </div>
-                <button class="viewRecipe">Voir la recette</button>
+                <button class="viewRecipe"><a target="_blank"  href="/recette.html">Voir la recette</a></button>
             </div>
         </div>
 
-        <div class="recetteC card">
+        <div class="recetteA card" data-id="rP3">
             <div class="bigContainer">
                 <div class="imgcontainer">
                     <span title="Ajouter aux favoris" class="heart">🤍</span>
@@ -213,7 +208,7 @@
                     <span class="time">30 min</span>
                     <span class="difficult">Facile</span>
                 </div>
-                <button class="viewRecipe">Voir la recette</button>
+                <button class="viewRecipe"><a target="_blank"  href="/recette.html">Voir la recette</a></button>
             </div>    
         </div>
 
@@ -223,41 +218,31 @@
 
 </main>
 
+<!------------FOOOOOOTER ------------------->
 
+<footer>
 
-
-
-
-
-    <footer>
-
-
-        <div class="footer">
-            <div>
-                <p class="navFooter">Navigation</p>
-                <ul class="ulFooter">
-                <li><a href="">Accueil</a></li>
+    <div class="footer">
+        <div>
+            <p class="navFooter">Navigation</p>
+            <ul class="ulFooter">
+                <li><a href="/index.html">Accueil</a></li>
                 <li><a href="">Ajouter une recette</a></li>
-                <li><a href="">Mes favoris</a></li>
-                <li><a href="">À propos</a></li>
-                </ul>
+                <li><a href="/generer.html">Recette Aléatoire</a></li>
+                <li><a href="/favoris.html">Mes favoris</a></li>
+                <li><a href="/a-propos.html">À propos</a></li>
+            </ul>
+        </div>
     
-    
-            </div>
-    
-            <div>
-                <p class="navFooter">À propos de GourmeTech</p>
-                <p>GourmeTech est une plateforme de recette culinaires interactives développée dans le cadre d'un projet pédagogique.</p>
-    
-            </div>
-        
-        </div>    
-    
-            <p class="pFooter">© 2025 GourmeTech - Tous droits réservés</p>
-    
-    
-    
-        </footer>
+        <div>
+            <p class="navFooter">À propos de GourmeTech</p>
+            <p>GourmeTech est une plateforme de recette culinaires interactives développée dans le cadre d'un projet pédagogique.</p>   
+        </div>
+    </div>
+
+    <p class="pFooter">© 2025 GourmeTech - Tous droits réservés</p>
+
+</footer>
 
 
     <script src="/JS/scripts.js"></script>

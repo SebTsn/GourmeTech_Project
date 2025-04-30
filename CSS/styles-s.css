@@ -306,6 +306,13 @@ img.gallery:hover{
     font-weight: bold;
     width: 80%;
 }
+.viewRecipe a{
+    text-decoration: none;
+}
+.viewRecipe a:visited{
+    text-decoration: none;
+    color: var(--background-color);
+}
 .recipeCenter{
     display: flex;
     flex-direction: column;

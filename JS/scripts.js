@@ -95,8 +95,9 @@ recetteQ.forEach(function(el){
 
 // Page RECETTE - ajouter FAV : 
 
-
 let btn = document.querySelector(".heart")
+
+if(btn !== null) {
 
 btn.addEventListener("click", function(){
 
@@ -111,7 +112,7 @@ if(value){
 }  
 
 })
-
+}
 
 //! NavBar Responsive //
 
